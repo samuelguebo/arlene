@@ -43,7 +43,7 @@ function arlene_setup() {
 	add_theme_support( 'post-thumbnails' );
     add_image_size( 'post-thumb', 370,210, array( 'left', 'top' ) );
     add_image_size( 'single-thumb', 770,330, array( 'left', 'top' ) );
-    add_image_size( 'slider-cover', 1300,500, array( 'left', 'top' ) );
+    add_image_size( 'slider-cover', 1100,450, array( 'left', 'top' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -100,11 +100,13 @@ add_action( 'widgets_init', 'arlene_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function arlene_scripts() {
     // CSS
 	wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.min.css' );
 	wp_enqueue_style( 'foundation-css', get_template_directory_uri().'/css/foundation.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css' );
+	wp_enqueue_style( 'motion-ui', 'https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.css' );
     
     $style = "style";
     if(""!=get_theme_mod('arlene_theme_color')){

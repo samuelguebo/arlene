@@ -1,7 +1,11 @@
 jQuery(document).ready(function ($) {
     
     /* Slideshow */
-
+    $(document).ready(function() {
+            setTimeout(function() {
+                $(".orbit").click();
+            }, 4000);
+    });
     
     $(document).foundation(); // Initialize Foundation
     /*Turn input[type=submit] into button */

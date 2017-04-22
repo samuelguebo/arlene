@@ -122,7 +122,7 @@ select {
 
 .row {
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 68.75rem;
   width: 100%; }
   .row:before, .row:after {
     content: " ";
@@ -1974,7 +1974,8 @@ meta.foundation-mq-topbar {
   .top-bar-section .has-dropdown {
     position: relative; }
     .top-bar-section .has-dropdown > a:after {
-      border: inset 5px;
+    
+      border: none;
       content: "";
       display: block;
       height: 0;
@@ -1985,7 +1986,7 @@ meta.foundation-mq-topbar {
       margin-top: -4.5px;
       position: absolute;
       top: 50%;
-      right: 0; }
+      right: 5px; }
     .top-bar-section .has-dropdown.moved {
       position: static; }
       .top-bar-section .has-dropdown.moved > .dropdown {
@@ -2121,7 +2122,7 @@ meta.foundation-mq-topbar {
     .top-bar-section .has-dropdown > a {
       padding-right: 2.1875rem !important; }
       .top-bar-section .has-dropdown > a:after {
-        border: inset 5px;
+        border: none;
         content: "";
         display: block;
         height: 0;

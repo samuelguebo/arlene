@@ -26,7 +26,7 @@
                     'container_class' => '',
                     'container_id' => '',
                     'menu_id' => 'main-menu',
-                    'menu_class' => 'left main-nav',
+                    'menu_class' => 'main-nav right',
                     'fallback_cb' => '',
                     'walker' => new Multilevel_Menu()
                     )); 

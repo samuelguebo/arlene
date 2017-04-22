@@ -16,11 +16,17 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="icon" type="image/png" href="<?php echo arlene_get_custom_logo(); ?>" />
+    <?php 
+    if( false === get_option( 'site_icon', false ) ) {
+    // Show favicon
+        wp_site_icon(); 
+    }
+    ?>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+    <section id ="boxed-wrapper">
     <?php
     if ( is_front_page() && is_home() ) : ?>
     <section <?php echo 'class= "fixed-header"'; ?>>
@@ -29,13 +35,14 @@
                 <div class="small-3 large-2 medium-2 columns logo">
                     <a href="<?php echo home_url(); ?>"> <img src="<?php echo arlene_get_custom_logo(); ?>" alt="<?php bloginfo('title'); ?>" title="<?php bloginfo('title'); ?>"> </a>
                 </div><!--logo/-->
-                <div class="nav-wrapper large-8 medium-8 columns">
+                <div class="nav-wrapper large-9 medium-8 columns">
                     <?php get_template_part('menu'); ?>
                 </div><!--/nav-wrapper-->   
-                <div class="small-4 large-2 medium-2 columns socials medium-uncentered small-centered large-uncentered">
-                    <ul>
-                        <?php arlene_social_links();?>
+                <div class="socials small-4 large-1 medium-2 columns socials medium-uncentered small-centered large-uncentered ">
+                    <ul class="right">
+                        <?php get_template_part('menu', 'social'); ?>
                     </ul>
+                    
                 </div><!--socials/-->
             </div>
         </header>

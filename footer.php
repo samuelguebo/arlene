@@ -10,26 +10,21 @@
  */
 ?>
     <footer id="footer">
-        <div class="footer-bar parallax">
-            <div class="row back-to-top-wrapper">
-                <a href="#0" class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a><!-- back to top-->
-                <?php dynamic_sidebar( 'footer-1' );?>
-            </div>
-        </div><!-- .footer-bar -->
         <div class="row">
-                <div class="small-6 large-6 columns">
-                    <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/inverse"><i class="fa fa-github"></i> Github</a></p>
+                <div class="medium-6 large-6 columns">
+                    <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a></p>
                 </div>
-
-                <div class="small-2 large-2 columns socials right">
-                    <ul>
-                        <?php arlene_social_links();?>
-                    </ul>
+                <div class="medium-4 large-4 columns">
+                        <?php get_search_form(); ?>
+                </div>
+                <div class="medium-2 large-2 columns socials right">
+                        <?php get_template_part('menu', 'social'); ?>
                 </div>
         </div><!-- copyright-->
 
     </footer>
     <?php wp_footer(); ?>
+</section><!-- .boxed-wrapper-->
 </body>
 
 </html>

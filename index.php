@@ -16,8 +16,6 @@ get_header(); ?>
         <?php get_template_part ('slider');?>
         <section class="row">
             <div class="category-row">
-                <h1 class="category-title"><?php arlene_from_blog_title();?></h1>
-                <div class="category-title-line large-2 large-centered columns"></div>
                 <!-- post list-->
                 <div class="post-list clearfix">
                     <?php //starting slider loop;

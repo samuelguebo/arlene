@@ -1,8 +1,10 @@
-$primary-color: #0e94c9;
-$secondary-color: #123e66;
+$primary-color: #319865;
+/* $primary-color: #0e94c9;*/
+$secondary-color: #921914;
+$menu-link-color: #6f6f6e;
 $dark-color: #020d16;
 $light-color: #FFF;
-$link-color: #0081d7;
+$link-color: $primary-color;
 $extra-light-color: #c8d5fc;
 
 @import 'base';

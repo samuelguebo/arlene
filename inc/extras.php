@@ -114,19 +114,6 @@ function arlene_new_excerpt_length($max_char, $more_link_text = '...',$notagp = 
         }
 
 /**
- * Adding the Home button to main menu 
- */
-add_filter( 'wp_nav_menu_items', 'add_home_menu_item', 10, 2 );
-function add_home_menu_item ( $items, $args ) {
-    if ($args->theme_location == 'primary') {
-        
-            $items = '<li id="home-link" $class_names><a href="'.site_url().'" title="'.esc_html__( 'Home', 'arlene' ).'"><i class="fa fa-home"></i></a></li>'.$items;
-        
-    }
-    return $items;
-}
-
-/**
  * Dealig with submenu items
  */
 class Multilevel_Menu extends Walker_Nav_Menu
@@ -495,3 +482,110 @@ function arlene_custom_title() {
             }
         return true;
     }
+    /**
+     * Add Thumbnail Column to Post Listing
+     */
+
+    add_image_size( 'admin-list-thumb', 80, 80, false );
+
+    function arlene_add_thumbnail_columns( $columns ) {
+
+        if ( !is_array( $columns ) )
+            $columns = array();
+        $new = array();
+
+        foreach( $columns as $key => $title ) {
+            if ( $key == 'title' ) // Put the Thumbnail column before the Title column
+                $new['featured_thumb'] = __( 'Image');
+            $new[$key] = $title;
+        }
+        return $new;
+    }
+
+    function arlene_add_thumbnail_columns_data( $column, $post_id ) {
+        switch ( $column ) {
+        case 'featured_thumb':
+            echo '<a href="' . $post_id . '">';
+            echo the_post_thumbnail( 'admin-list-thumb' );
+            echo '</a>';
+            break;
+        }
+    }
+
+    if ( function_exists( 'add_theme_support' ) ) {
+        add_filter( 'manage_posts_columns' , 'arlene_add_thumbnail_columns' );
+        add_action( 'manage_posts_custom_column' , 'arlene_add_thumbnail_columns_data', 10, 2 );
+    }
+    
+    /*
+     * Creating the social nav menu
+     * inspired by @http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
+     *
+     */
+    add_action( 'init', 'acajou_register_nav_menus' );
+
+    function acajou_register_nav_menus() {
+        register_nav_menu( 'social', __( 'Social', 'acajou' ) );
+    }
+
+    /*
+     * A function for creating  Custom Post Types (CPT)
+     * @link http://www.wpbeginner.com/wp-tutorials/how-to-create-custom-post-types-in-wordpress/
+     */
+
+    function arlene_register_post_type($singular,$plural,$taxonomies, $description, $icon) {
+        // Set UI labels for Custom Post Type
+        $labels = array(
+            'name'                => _x( ucfirst($plural), 'Post Type General Name', 'arlene' ),
+            'singular_name'       => _x( ucfirst($singular), 'Post Type Singular Name', 'arlene' ),
+            'menu_name'           => __( ucfirst($plural), 'arlene' ),
+            'parent_item_colon'   => __( 'Parent '.ucfirst($singular), 'arlene' ),
+            'all_items'           => __( 'All '.ucfirst($plural), 'arlene' ),
+            'view_item'           => __( 'View '.ucfirst($singular), 'arlene' ),
+            'add_new_item'        => __( 'Add New '.ucfirst($singular), 'arlene' ),
+            'add_new'             => __( 'Add '.ucfirst($singular), 'arlene' ),
+            'edit_item'           => __( 'Edit '.ucfirst($singular), 'arlene' ),
+            'update_item'         => __( 'Update '.ucfirst($singular), 'arlene' ),
+            'search_items'        => __( 'Search '.ucfirst($singular), 'arlene' ),
+            'not_found'           => __( 'Not Found', 'arlene' ),
+            'not_found_in_trash'  => __( 'Not found in Trash', 'arlene' ),
+        );
+
+    // Set other options for Custom Post Type
+
+        $args = array(
+            'label'               => __( $plural, 'arlene' ),
+            'description'         => __( $description, 'arlene' ),
+            'labels'              => $labels,
+            // Features this CPT supports in Post Editor
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            // You can associate this CPT with a taxonomy or custom taxonomy. 
+            'taxonomies'          => $taxonomies,
+            /* A hierarchical CPT is like Pages and can have
+            * Parent and child items. A non-hierarchical CPT
+            * is like Posts.
+            */	
+            'hierarchical'        => false,
+            'public'              => true,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 5,
+            'menu_icon'      => $icon,
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => false,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        );
+            register_post_type($singular, $args);
+    }
+
+    function arlene_custom_post_types() {
+        // Registering your Custom Post Type
+        arlene_register_post_type('programme','programmes',array('categories'), 'Programmes','dashicons-portfolio');
+        arlene_register_post_type('event','events',array('categories'), 'Past and future events','dashicons-calendar-alt');
+    }
+
+    add_action( 'init', 'arlene_custom_post_types', 0 );
