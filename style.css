@@ -1,0 +1,22 @@
+/*
+Theme Name: Arlene
+Theme URI: http://wikimedia.ci
+Author: Samuel Guébo
+Author URI: http://twitter.com/samuelguebo
+Description: Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath. 
+Version: 1.0.0
+
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: acajou
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+.sticky,
+.screen-reader-text,
+.gallery-caption,
+.bypostauthor {
+}
