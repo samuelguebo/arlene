@@ -52,7 +52,7 @@ get_header(); ?>
                 
                 <div class="event-widget">
                     <?php //starting events loop;
-                    $i = 1;	$args = array ('post_type'=>'event','showposts'=>5); 
+                    $i = 1;	$args = array ('post_type'=>'event','showposts'=>5,'order'=>'ASC','post_status' => array('future')); 
                     $events = new WP_Query($args);                    
                     if($events->have_posts() ) :
                         while ( $events->have_posts())  : $events->the_post();

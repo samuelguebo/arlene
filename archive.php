@@ -13,14 +13,20 @@
  */
 
 get_header(); ?>
-
-            <section class="category-row row">
-                <section id="breadcrumbs">
-                    <div class="breadcrumbs row">
-                        <?php if (function_exists('arlene_custom_breadcrumbs')) arlene_custom_breadcrumbs(); ?>
-                    </div>
-                </section>
-                
+            <section class="single-cover" 
+             style="background-image:url(<?php echo esc_url(get_header_image());?>); background-position:center center;">
+                <div class="overlay">
+                    <h3 class="center title">
+                        <?php the_archive_title();?>
+                    </h3>
+                </div>
+            </section>
+            <section id="breadcrumbs" >
+                <div class="breadcrumbs">
+                    <?php if (function_exists('arlene_custom_breadcrumbs')) arlene_custom_breadcrumbs(); ?>
+                </div>
+            </section>
+            <section class="category-row row">                
                 <!-- post list-->
                 <section class="large-8 columns main-column">
                     <div class="post-list clearfix">
@@ -41,12 +47,13 @@ get_header(); ?>
 
                             endif; ?>
                     </div>
-                    <div class="pagination-wrapper" >
-                        <?php if(function_exists('arlene_pagination')) { 
-                            arlene_pagination($wp_query->found_posts, $paged); 
-                        }else {
-                            posts_nav_link();
-                        } ?>
+                    <div class="pagination-wrapper columns large-4 large-centered" >
+                        <?php the_posts_pagination( array(
+                            'mid_size' => 2,
+                            'prev_text' => __( '&laquo;', 'acajou' ),
+                            'next_text' => __( '&raquo;', 'acajou' ),
+                            'screen_reader_text' => ' '
+                        ) ); ?>
                     </div>
                 </section>
                 <?php get_sidebar();?>

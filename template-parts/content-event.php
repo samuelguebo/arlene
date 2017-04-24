@@ -27,7 +27,7 @@ Template part for displaying event lists item.
         <h6 class="full-day"><?php echo get_the_date('l')?></h6>
     </div>
         
-    <div class="columns large-6 small-6">
+    <div class="columns large-6 small-6 no-padding-right">
         <p class="description"><a href="<?php the_permalink();?>"><?php the_title();?></a></p> 
     </div>
 </div><!--event/-->

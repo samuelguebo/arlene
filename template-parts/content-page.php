@@ -11,7 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class();?>>
     <!--post/-->
-    <br>
     <div class="post-item-caption">
         <?php if ( has_post_thumbnail() ):?>
             <div class="post-item-image"> 
@@ -23,7 +22,7 @@
                     <?php the_content();?> 
                 </div>
                 <div class="post-pagination clearfix">
-                    <?php
+                    <?php global $numpages;
                     if ( is_singular() && $numpages > 1 ):?>
                         <div class="pagination-wrapper" >
                             <?php wp_link_pages();?> 

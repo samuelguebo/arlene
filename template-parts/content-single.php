@@ -10,23 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class();?>>
-    <!--post/-->
-    <h1 class="category-title" class="large-6 columns"><?php the_title();?></h1>
-    <div class="category-title-line large-4 columns"></div>
-    <br>
     <div class="post-item-caption">
         <?php if ( has_post_thumbnail() ):?>
             <div class="post-item-image"> 
                 <?php the_post_thumbnail( 'single-thumb',array('class' =>'delay placeholder') );?>
-                <p class="post-item-date"> 
-                    <span class="day"><?php echo get_the_date('d')?></span> <span class="month-year"><?php echo get_the_date('M. Y')?>
-                    </span> 
-                </p>
+    
             </div>        
         <?php endif;?>
+        
         <?php if(is_single()): global $numpages; ?>
             <div class="panel">
                 <div class="post-content">
+                    <span class="post-item-date"><?php echo get_the_date('d/m/Y')?> / <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></span><br><!--date/-->
                     <?php the_content();?> 
                 </div>
                 <div class="post-pagination clearfix">

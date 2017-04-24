@@ -22,6 +22,7 @@
         </div>
         <div class="panel">
             <h6 class="post-item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h6>
+            <span class="post-item-date"><?php echo get_the_date('d/m/Y')?></span><br><!--date/-->
             <p><?php echo arlene_new_excerpt_length(100);?></p> 
         
             <a href="<?php the_permalink();?>" class="small button"><?php _e('Read more','arlene')?></a>    
