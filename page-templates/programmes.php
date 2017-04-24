@@ -1,18 +1,15 @@
 <?php
 /*
 ================================================================================================
-Arlene - etudes.php
-Template Name: Etude Template
+Arlene - programmes.php
+Template Name: Programmes
 ================================================================================================
-This is the template that displays all pages by default.
-Please note that this is the WordPress construct of pages
-and that other 'pages' on your WordPress site may use a
-different template.
+This is the template that displays all programmes.
 
 @package        Arlene
 @copyright      Copyright (C) 2017. Samuel Guebo
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@author         Samuel Guebo (http://samuelguebo.co/)
 ================================================================================================
 */
 

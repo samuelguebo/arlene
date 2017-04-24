@@ -41,7 +41,7 @@ function arlene_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-    add_image_size( 'post-thumb', 370,210, array( 'left', 'top' ) );
+    add_image_size( 'post-thumb', 370,260, array( 'left', 'top' ) );
     add_image_size( 'single-thumb', 770,330, array( 'left', 'top' ) );
     add_image_size( 'slider-cover', 1100,450, array( 'left', 'top' ) );
 

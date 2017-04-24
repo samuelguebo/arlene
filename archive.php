@@ -22,7 +22,7 @@ get_header(); ?>
                 </section>
                 
                 <!-- post list-->
-                <section class="large-9 columns main-column">
+                <section class="large-8 columns main-column">
                     <div class="post-list clearfix">
                         <?php
                             if ( have_posts() ) :

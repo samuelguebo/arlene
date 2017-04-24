@@ -1,11 +1,5 @@
 jQuery(document).ready(function ($) {
-    
-    /* Slideshow */
-    $(document).ready(function() {
-            setTimeout(function() {
-                $(".orbit").click();
-            }, 4000);
-    });
+
     
     $(document).foundation(); // Initialize Foundation
     /*Turn input[type=submit] into button */
@@ -32,11 +26,10 @@ jQuery(document).ready(function ($) {
     }, 50);
     
     /* Equalizer */
-    $(window).resize(function () {
-        equalheight('.post-list .post-item .post-item-caption');
-    });
     $(window).load(function () {
         equalheight('.post-list .post-item .post-item-caption');
+        equalheight('.category-row .post-item-caption img');
+        equalheight('.category-row .post-item-title');
     });
     
     /* Back to Top */

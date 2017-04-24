@@ -35,7 +35,7 @@ add_filter( 'body_class', 'arlene_body_classes' );
 function arlene_post_item_class() {
     
 	if ( is_front_page() || is_home()) {
-		$classes[] = 'post-item large-4 medium-6 columns';
+		$classes[] = 'post-item large-6 medium-6 columns';
 	}elseif(is_singular()) {
         $classes[] = 'post-item';
         
@@ -449,7 +449,10 @@ function arlene_custom_title() {
         $post = get_post($post_id);
         $post_content = $post->post_content;
         preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post_content, $matches);
-        return $matches[1][0];
+        if(0<count($matches[1])) {
+            return $matches[1][0];
+        }
+        
     }
 
     function arlene_modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
@@ -572,7 +575,7 @@ function arlene_custom_title() {
             'show_in_nav_menus'   => true,
             'show_in_admin_bar'   => true,
             'menu_position'       => 5,
-            'menu_icon'      => $icon,
+            'menu_icon'           => $icon,
             'can_export'          => true,
             'has_archive'         => true,
             'exclude_from_search' => false,
@@ -584,8 +587,21 @@ function arlene_custom_title() {
 
     function arlene_custom_post_types() {
         // Registering your Custom Post Type
-        arlene_register_post_type('programme','programmes',array('categories'), 'Programmes','dashicons-portfolio');
-        arlene_register_post_type('event','events',array('categories'), 'Past and future events','dashicons-calendar-alt');
+        arlene_register_post_type('programme','programmes', array('categories'), 'Programmes','dashicons-portfolio');
+        arlene_register_post_type('event','events', array('categories'), 'Past and future events','dashicons-calendar-alt');
     }
 
     add_action( 'init', 'arlene_custom_post_types', 0 );
+
+    /*
+     * Check is a certain template is currently being used 
+     * by a page. If yes, return the url of that page
+     */
+    function arlene_get_template_url($filename) {
+        if ( is_page_template($filename) ) {
+            echo $filename.' is being used';
+        } else {
+            //return false;// Returns false when 'about.php' is not being used.
+            echo $filename.' is not being used';
+        }
+    }
