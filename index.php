@@ -34,7 +34,7 @@ get_header(); ?>
                                 get_template_part( 'template-parts/content', 'programme' );
                             endwhile;
                         endif; wp_reset_query();?>
-                        <p class="call-to-action">
+                        <p class="call-to-action clearfix">
                             <a href="#" class="small button post-item-buttom radius"><?php _e('All programmes','arlene')?></a>
                         </p>
                     </div>
@@ -52,7 +52,7 @@ get_header(); ?>
                 
                 <div class="event-widget">
                     <?php //starting events loop;
-                    $i = 1;	$args = array ('post_type'=>'event','showposts'=>5,'order'=>'ASC','post_status' => array('future')); 
+                    $args = array ('post_type'=>'event','showposts'=>5,'order'=>'ASC','post_status' => array('future')); 
                     $events = new WP_Query($args);                    
                     if($events->have_posts() ) :
                         while ( $events->have_posts())  : $events->the_post();

@@ -36,12 +36,11 @@ function arlene_post_item_class() {
     
 	if ( is_front_page() || is_home()) {
 		$classes[] = 'post-item large-6 medium-6 columns';
-	}elseif(is_singular()) {
-        $classes[] = 'post-item';
+	}elseif(is_singular() && !is_singular('page')) {
+        $classes[] = 'post-item ';
         
-    }elseif(!is_front_page() && !is_home() && !is_singular()) {
+    }else {
         $classes[] = 'post-item large-6 medium-6 columns';
-        
     }
     return $classes;
 }
@@ -280,7 +279,7 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
       if ( get_post_type() != 'post' ) {
         $post_type = get_post_type_object(get_post_type());
         $slug = $post_type->rewrite;
-        echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
+        //echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
         if ($showCurrent == 1) echo '' . $before . get_the_title() . $after;
       } else {
         $cat = get_the_category(); $cat = $cat[0];

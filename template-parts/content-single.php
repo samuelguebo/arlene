@@ -21,7 +21,9 @@
         <?php if(is_single()): global $numpages; ?>
             <div class="panel">
                 <div class="post-content">
-                    <span class="post-item-date"><?php echo get_the_date('d/m/Y')?> / <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></span><br><!--date/-->
+                    <?php if(is_single('post')):?>
+                        <span class="post-item-date"><?php echo get_the_date('d/m/Y')?> / <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></span><br><!--date/-->
+                    <?php endif;?>
                     <?php the_content();?> 
                 </div>
                 <div class="post-pagination clearfix">
@@ -33,33 +35,36 @@
                         <?php 
                     endif;?>
                 </div>
-                <div class="post-categories breadcrumbs">
-                    <?php $categories = get_the_category();
-                        if ( $categories ): ?>
-                            <span><?php _e('categories','arlene');?></span>
-                            <?php foreach($categories as $cat):
-                                echo '<span><a href="'.get_category_link($cat->term_id).'">'.$cat->name.'</a></span>';
-                            endforeach;
-                        endif;
-                    ?>
-                </div><!-- .post-categories -->
-                <div class="post-tags breadcrumbs">
-                    <?php $tags = get_the_tags(get_the_ID());
-                        if ( $tags ): ?>
-                            <span><?php _e('tags','arlene');?></span>
-                            <?php foreach($tags as $tag):
-                                echo '<span><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a></span>';
-                            endforeach;
-                        endif;
-                    ?>
-                </div><!-- .post-tags -->
+                <?php if(is_single('post')):?>
+                    <div class="post-categories breadcrumbs">
+                        <?php $categories = get_the_category();
+                            if ( $categories ): ?>
+                                <span><?php _e('categories','arlene');?></span>
+                                <?php foreach($categories as $cat):
+                                    echo '<span><a href="'.get_category_link($cat->term_id).'">'.$cat->name.'</a></span>';
+                                endforeach;
+                            endif;
+                        ?>
+                    </div><!-- .post-categories -->
+                    <div class="post-tags breadcrumbs">
+                        <?php $tags = get_the_tags(get_the_ID());
+                            if ( $tags ): ?>
+                                <span><?php _e('tags','arlene');?></span>
+                                <?php foreach($tags as $tag):
+                                    echo '<span><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a></span>';
+                                endforeach;
+                            endif;
+                        ?>
+                    </div><!-- .post-tags -->
+                
                 <div class="panel post-item-author row reveal">
                     <div class="medium-4 large-3 columns"> <?php echo get_avatar( get_the_author_meta('ID'), 120 ); ?> </div>
                     <div class="medium-8 large-9 columns">
                         <h3><?php _e('About the author','arlene'); ?></h3>
                         <div><?php echo nl2br(get_the_author_meta('description')); ?></div>
                     </div>
-                </div>
+                </div><!-- gravatar -->
+                <?php endif;?>
             </div>
         <?php endif;?>
     </div>

@@ -50,8 +50,8 @@ get_header(); ?>
                     <div class="pagination-wrapper columns large-4 large-centered" >
                         <?php the_posts_pagination( array(
                             'mid_size' => 2,
-                            'prev_text' => __( '&laquo;', 'acajou' ),
-                            'next_text' => __( '&raquo;', 'acajou' ),
+                            'prev_text' => __( '&laquo;', 'arlene' ),
+                            'next_text' => __( '&raquo;', 'arlene' ),
                             'screen_reader_text' => ' '
                         ) ); ?>
                     </div>

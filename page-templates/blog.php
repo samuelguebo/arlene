@@ -1,10 +1,10 @@
 <?php
 /*
 ================================================================================================
-Arlene - programmes.php
-Template Name: Programmes
+Arlene - blog.php
+Template Name: Blog
 ================================================================================================
-This is the template that displays all programmes.
+This is the template that displays all posts. Let's call it the Blog as a conventional pattern.
 
 @package        Arlene
 @copyright      Copyright (C) 2017. Samuel Guebo
@@ -36,7 +36,7 @@ get_header(); ?>
                                 /* Start the Loop */
                                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // for pagination purpose
                                 $args = array(
-                                        'post_type' => array('programme'),
+                                        'post_type' => array('post'),
                                         'posts_per_page' =>4,
                                         'paged'=>$paged
                                         );
@@ -45,7 +45,7 @@ get_header(); ?>
                                 while ( $blog_posts->have_posts() ) : $blog_posts->the_post();
 
                                     //get_template_part( 'template-parts/content', get_post_format() );
-                                    get_template_part( 'template-parts/content', 'programme' );
+                                    get_template_part( 'template-parts/content', 'article' );
 
                                 endwhile;
 
