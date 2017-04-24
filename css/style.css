@@ -1343,9 +1343,15 @@ ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.paginatio
   background: #020d16; }
 
 /* EVENTS */
+.category-row .event-widget {
+  padding: 20px; }
+
 .event-widget .event-item {
   padding: 12px 5px;
   border-bottom: solid 1px #ededed; }
+
+.category-row .event-widget .event-item {
+  padding: 18px 0px; }
 
 .event-widget .event-item:last-of-type {
   border-bottom: 0px; }
@@ -1361,6 +1367,9 @@ ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.paginatio
   letter-spacing: -4px;
   text-align: center; }
 
+.category-row .event-widget .day {
+  text-align: left; }
+
 .event-widget .month {
   color: #c9c9c9; }
 
@@ -1372,9 +1381,13 @@ ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.paginatio
   margin-bottom: 0; }
 
 .event-widget .description a {
-  font-size: 0.85em;
+  font-size: 0.8em;
   font-weight: 300;
   color: #020d16; }
+
+.event-widget .link {
+  line-height: 2.45rem;
+  font-size: 1rem; }
 
 .event-widget .description a:hover {
   color: #921914; }

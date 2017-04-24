@@ -1573,9 +1573,14 @@ ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.paginatio
 }
 
 /* EVENTS */
+.category-row .event-widget {
+    padding: 20px;
+}
 .event-widget .event-item {
     padding:12px 5px;
     border-bottom: solid 1px $border-color;
+}.category-row .event-widget .event-item {
+    padding:18px 0px;
 }
 .event-widget .event-item:last-of-type{
     border-bottom: 0px;
@@ -1586,10 +1591,15 @@ ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.paginatio
     line-height: 0.6em;
 }
 .event-widget .day{color:$primary-color;line-height: 0.8;letter-spacing: -4px;text-align: center;}
+.category-row .event-widget .day{text-align: left;}
 .event-widget .month{color:$shadow-color;}
 .event-widget .full-day{color:$primary-color;font-weight: 300; }
 .event-widget p.description { margin-bottom: 0;}
-.event-widget .description a{ font-size: 0.85em; font-weight: 300; color:$dark-color;}
+.event-widget .description a{ font-size: 0.8em; font-weight: 300; color:$dark-color;}
+.event-widget .link{
+    line-height: 2.45rem;
+    font-size: 1rem;
+}
 .event-widget .description a:hover{color:$secondary-color;}
 
 /* MISCELLANEOUS */
