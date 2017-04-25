@@ -423,17 +423,41 @@ function arlene_custom_title() {
              echo '</p>';
          }
      }
+    
     /*
-     * "From the blog"
+     * Getters for customizer options
      *
      */
-     function arlene_from_blog_title(){
-         $text = __("From the blog", "inverse");
-         if(get_theme_mod( 'from_text' ) && ""!=get_theme_mod( 'from_text' )) {
-            $text = get_theme_mod( 'from_text' );
+     function arlene_get_events_label(){
+         $text = __("Events", "arlene");
+         if(get_theme_mod( 'events_label' ) && ""!=get_theme_mod( 'events_label' )) {
+            $text = get_theme_mod( 'events_label' );
          }
-         echo $text;
+         return $text;
      }
+    function arlene_get_events_page(){
+         $text = "#";
+         if(get_theme_mod( 'events_page' ) && ""!=get_theme_mod( 'events_page' )) {
+            $text = get_theme_mod( 'events_page' );
+         }
+         return $text;
+     }
+    
+    function arlene_get_programmes_label(){
+         $text = __("Our programmes", "arlene");
+         if(get_theme_mod( 'programmes_label' ) && ""!=get_theme_mod( 'programmes_label' )) {
+            $text = get_theme_mod( 'programmes_label' );
+         }
+         return $text;
+     }
+    function arlene_get_programmes_page(){
+        $text = "#"; 
+        if(get_theme_mod( 'programmes_page' ) && ""!=get_theme_mod( 'programmes_page' )) {
+            $text = get_theme_mod( 'programmes_page' );
+         }
+         return $text;
+     }
+        
     /*
      * Override the default post_thumbnail() content
      *

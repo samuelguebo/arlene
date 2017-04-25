@@ -12,82 +12,6 @@
  */
 function arlene_customize_register( $wp_customize ) {
 	
-    // Create sections for socials links
-    $wp_customize->add_section('arlene_social_links', array(
-		'title' => __('Social links', 'arlene'),
-		'priority' => 30,
-	));
-    
-    // Facebook link
-    $wp_customize->add_setting('facebook_url', array(
-		'default' => '#',
-		'transport' => 'refresh',            
-        'sanitize_callback'	=> 'arlene_sanitize_text'
-
-	));
-    $wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'facebook_url',
-		array(
-			'label' => __('Enter Facebook url', 'arlene'),
-			'section' => 'arlene_social_links',
-			'settings' => 'facebook_url',
-			'type' => 'text',
-		)
-	));
-    
-    // Twitter link
-    $wp_customize->add_setting('twitter_url', array(
-		'default' => '#',
-		'transport' => 'refresh',
-        'sanitize_callback'	=> 'arlene_sanitize_text'
-
-	));
-    $wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'twitter_url',
-		array(
-			'label' => __('Enter Twitter url', 'arlene'),
-			'section' => 'arlene_social_links',
-			'settings' => 'twitter_url',
-			'type' => 'text',
-		)
-	));
-    
-    // Youtube link
-    $wp_customize->add_setting('youtube_url', array(
-		'default' => '#',
-		'transport' => 'refresh',
-		'sanitize_callback'	=> 'arlene_sanitize_text'
-	));
-    $wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'youtube_url',
-		array(
-			'label' => __('Enter Youtube url', 'arlene'),
-			'section' => 'arlene_social_links',
-			'settings' => 'youtube_url',
-			'type' => 'text',
-		)
-	));
-    
-    // Github link
-    $wp_customize->add_setting('github_url', array(
-		'default' => '',
-		'transport' => 'refresh',
-		'sanitize_callback'	=> 'arlene_sanitize_text'
-	));
-    $wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'github_url',
-		array(
-			'label' => __('Enter Github url', 'arlene'),
-			'section' => 'arlene_social_links',
-			'settings' => 'github_url',
-			'type' => 'text',
-		)
-	));
-    
     
     /*
      * Theme colors using Customizer Custom Controls, 
@@ -113,36 +37,99 @@ function arlene_customize_register( $wp_customize ) {
                     'settings' => 'arlene_theme_color',
                 )
             )
-        );
-    
-    
+        );    
     
      /*
-     * From the blog text
-     * 
-     *
-     */
-    // Create sections for socials links
-    $wp_customize->add_section('arlene_from_section', array(
-		'title' => __('From the blog', 'arlene'),
+      * Events
+      *
+      */
+    
+    // Create sections for Events settings
+    $wp_customize->add_section('arlene_events_section', array(
+		'title' => __('Events', 'arlene'),
 		'priority' => 30,
 	));
     
-    // Typing lines
-    $wp_customize->add_setting('from_text', array(
-		'default' => 'From the blog',
+    // Events page selector
+    $wp_customize->add_setting('events_page', array(
+		'default' => '',
+		'transport' => 'refresh',
+        'sanitize_callback'	=> 'absint'
+
+	));
+    $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'events_page',
+		array(
+			'label' => __('Set what page must be used for listing the events.', 'arlene'),
+			'section' => 'arlene_events_section',
+			'settings' => 'events_page',
+			'type' => 'dropdown-pages',
+		)
+	));
+    
+     // Events label
+    $wp_customize->add_setting('events_label', array(
+		'default' => __('Events', 'arlene'),
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'arlene_sanitize_text'
 
 	));
     $wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'from_text',
+		'twitter_url',
 		array(
-			'label' => __('Replace the defaut &laquo; From the blog &raquo; text', 'arlene'),
-			'section' => 'arlene_from_section',
-			'settings' => 'from_text',
-			'type' => 'textarea',
+			'label' => __('Label for the Events section on homepage', 'arlene'),
+			'section' => 'events_page',
+			'settings' => 'events_label',
+			'type' => 'text',
+		)
+	));
+    
+    /*
+     * Programmes
+     *
+     */
+    
+    // Create sections for Programmes settings
+    $wp_customize->add_section('arlene_programmes_section', array(
+		'title' => __('Programmes', 'arlene'),
+		'priority' => 30,
+	));
+    
+    // Programmes page selector
+    $wp_customize->add_setting('programmes_page', array(
+		'default' => '',
+		'transport' => 'refresh',
+        'sanitize_callback'	=> 'absint'
+
+	));
+    $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'arlene_programmes_page',
+		array(
+			'label' => __('Set what page must be used for listing the programmes.', 'arlene'),
+			'section' => 'arlene_programmes_section',
+			'settings' => 'programmes_page',
+			'type' => 'dropdown-pages',
+		)
+	));
+    
+     // Programmes label
+    $wp_customize->add_setting('programmes_label', array(
+		'default' => __('Programmes', 'arlene'),
+		'transport' => 'refresh',
+        'sanitize_callback'	=> 'arlene_sanitize_text'
+
+	));
+    $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'twitter_url',
+		array(
+			'label' => __('Label for the Programmes section on homepage', 'arlene'),
+			'section' => 'programmes_page',
+			'settings' => 'programmes_label',
+			'type' => 'text',
 		)
 	));
 }
@@ -152,7 +139,7 @@ add_action( 'customize_register', 'arlene_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function arlene_customize_preview_js() {
-	wp_enqueue_script( 'arlene_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'arlene_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170425', true );
 }
 
 /* Validate user input */

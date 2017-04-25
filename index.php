@@ -18,7 +18,9 @@ get_header(); ?>
             <section class="large-8 columns main-column">
                 <div class="columns large-12 category-header no-padding-left">
                     <div class="small-6 large-6 columns left">
-                        <h3 class="category-title"><?php _e('Our programmes','arlene');?></h3>
+                        <h3 class="category-title">
+                        <?php echo arlene_get_programmes_label();?>
+                        </h3>
                     </div>
                     <div class="small-6 large-6 columns category-title-line right"></div>
                 </div><!--header/-->
@@ -35,7 +37,7 @@ get_header(); ?>
                             endwhile;
                         endif; wp_reset_query();?>
                         <p class="call-to-action clearfix">
-                            <a href="#" class="small button post-item-buttom radius"><?php _e('All programmes','arlene')?></a>
+                            <a href="<?php the_permalink(arlene_get_programmes_page());?>" class="small button post-item-buttom radius"><?php _e('All programmes','arlene')?></a>
                         </p>
                     </div>
                     
@@ -45,7 +47,7 @@ get_header(); ?>
             <aside id="sidebar" class="large-4 columns">
                 <div class="columns large-12 category-header no-padding-left no-padding-right">
                     <div class="small-5 large-5 columns no-padding-left">
-                        <h3 class="category-title"><?php _e('Events','arlene');?></h3>
+                        <h3 class="category-title"><?php echo arlene_get_events_label();?></h3>
                     </div>
                     <div class="small-7 large-7 columns category-title-line right no-padding-right"></div>
                 </div><!--header/-->
@@ -61,7 +63,7 @@ get_header(); ?>
                     endif; wp_reset_query();?>
                     <p class="call-to-action">
                         
-                        <a href="<?php arlene_get_template_url('events.php')?>" class="small button radius"><?php _e('All events','arlene')?></a>
+                        <a href="<?php the_permalink(arlene_get_events_page());?>" class="small button radius"><?php _e('All events','arlene')?></a>
                     </p>
                 </div>
             </aside>
