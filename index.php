@@ -36,11 +36,10 @@ get_header(); ?>
                                 get_template_part( 'template-parts/content', 'programme' );
                             endwhile;
                         endif; wp_reset_query();?>
-                        <p class="call-to-action clearfix">
-                            <a href="<?php the_permalink(arlene_get_programmes_page());?>" class="small button post-item-buttom radius"><?php _e('All programmes','arlene')?></a>
-                        </p>
                     </div>
-                    
+                    <p class="call-to-action clearfix">
+                        <a href="<?php the_permalink(arlene_get_programmes_page());?>" class="small button post-item-buttom radius"><?php _e('All programmes','arlene')?></a>
+                    </p>
                     
                 </div>
             </section>

@@ -258,7 +258,7 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
     if ( is_category() ) {
       $thisCat = get_category(get_query_var('cat'), false);
       if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, '');
-      echo $before . __('Archive by category ','arlene').'"' . single_cat_title('', false) . '"' . $after;
+      echo $before . single_cat_title('', false) . $after;
  
     } elseif ( is_search() ) {
       echo $before . '"' . get_search_query() . '"' . $after;
@@ -332,51 +332,6 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
  
   }
 }
-    
-/**
- * Arlene Custom Title prints a title on archive pages : category, tag, author, etc.
- * Its logic is similar to the breadcrumbs.
- */
-
-function arlene_custom_title() {        
-    
-  if (is_home() || is_front_page()) {
-  
-    echo 'From the blog';
-  
-  } else {
-  
-     if ( is_category() ) {
-        echo single_cat_title('', false);
-  
-    } elseif ( is_search() ) {
-      echo $before . __('"','arlene'). get_search_query() . '"' . $after;
-  
-    } elseif ( is_day() ) {
-      echo get_the_time('d').' '.get_the_time('F');
-  
-    } elseif ( is_month() ) {
-      echo get_the_time('F').' '.get_the_time('Y');
-  
-    } elseif ( is_year() ) {
-      echo get_the_time('Y');
-  
-    } elseif ( is_tag() ) {
-      echo single_tag_title('', false);
-  
-    } elseif ( is_author() ) {
-       global $author;
-      $userdata = get_userdata($author);
-      echo __('Articles written by ','arlene') . $userdata->display_name;
-  
-    } elseif ( is_404() ) {
-      echo __('Sorry, not found','arlene');
-    }
-
-  
- 
-  }
-} 
   /*
    * Print social links
    *

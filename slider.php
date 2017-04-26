@@ -24,7 +24,7 @@
             animation_speed:500;
             navigation_arrows:false;
             timer_speed:4000;
-            timer:true;
+            timer:false;
             bullets:true;
             slide_number:false;"
             >

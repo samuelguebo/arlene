@@ -14,7 +14,7 @@
         <ul class="title-area">
             <li class="name">
                  </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span><?php esc_html_e( 'Menu', 'arlene' );?></span></a></li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
         <section class="top-bar-section">
             <?php
@@ -26,7 +26,7 @@
                     'container_class' => '',
                     'container_id' => '',
                     'menu_id' => 'main-menu',
-                    'menu_class' => 'main-nav right',
+                    'menu_class' => 'main-nav',
                     'fallback_cb' => '',
                     'walker' => new Multilevel_Menu()
                     )); 

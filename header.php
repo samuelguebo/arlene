@@ -31,27 +31,27 @@
             <header class="background-white">
                 <div class="row clearfix">
                     <?php if(has_custom_logo()):?>
-                    <div class="small-3 large-2 columns logo">
+                    <div class="small-6 large-2 medium-3 large-uncentered columns logo">
                         <a href="<?php echo site_url(); ?>">  
                             <?php the_custom_logo();?>
                         </a>
                     </div>
                     <?php else:?>
-                    <div class="small-3 large-2 columns">
+                    <div class="small-3 large-2 medium-12 large-uncentered columns">
                         <h2 class="site-title">
                             <a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a>
                         </h2>
                     </div>
                     <?php endif;?>
-                    <div class="nav-wrapper large-9 medium-8 columns">
-                        <?php get_template_part('menu'); ?>
-                    </div><!--/nav-wrapper-->   
-                    <div class="socials small-4 large-1 medium-2 columns socials medium-uncentered small-centered large-uncentered ">
+                    <div class="socials small-2 large-1 medium-6 columns socials medium-uncentered small-centered large-uncentered right">
                         <ul class="right">
                             <?php get_template_part('menu', 'social'); ?>
                         </ul>
 
                     </div><!--socials/-->
+                    <div class="nav-wrapper large-9 medium-12 columns left">
+                        <?php get_template_part('menu'); ?>
+                    </div><!--/nav-wrapper-->   
                 </div>
             </header>
         </section>

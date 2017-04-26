@@ -5,6 +5,19 @@ jQuery(document).ready(function ($) {
     /*Turn input[type=submit] into button */
     $('input[type=submit]').addClass('button small');
     
+    /* Toggler */
+    //.$('.toggle-topbar a').click('.top-bar').foundation('toggle');
+    
+    /*
+    $('.toggle-topbar a').on('click', function (e) {
+            if($('.top-bar').hasClass('expanded')) {
+                $('.top-bar').removeClass('expanded');
+            }else {
+                $('.top-bar').addClass('expanded');
+            }
+    });
+    */
+    
     /* WOW effect with ScrollReveal */
     window.sr = ScrollReveal();
     sr.reveal('.top-bar li', {
