@@ -1,13 +1,12 @@
-$primary-color: #e34a00;
+$primary-color: #c91030;
 $secondary-color: $primary-color;
-$third-color: #921914;
+$third-color:#921914;
 $menu-link-color: #6f6f6e;
 $dark-color: #020d16;
 $light-color: #FFF;
 $link-color: $primary-color;
 
 @import 'base';
-
 .orbit-bullets li {
     border: solid 1px $link-color;
 }
