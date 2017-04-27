@@ -42,7 +42,7 @@ class Palette_Custom_Control extends WP_Customize_Control
                         background: #0e94c9;
                     }
                     #palette .green {
-                        background: #3fc455;
+                        background: #309864;
                     }
                     #palette .purple {
                         background: #8e0788;
@@ -62,14 +62,14 @@ class Palette_Custom_Control extends WP_Customize_Control
                       <?php echo esc_html( $this->label ); ?>
                     </h1>
                   <div id="palette">
-                    <a class="blue" href="#">
+                      <a class="green" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="" />
+                    </a>
+                    <a class="blue" href="#">
+                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="blue" />
                     </a>
                     <a class="chocolate" href="#">
                       <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="chocolate" />
-                    </a>
-                    <a class="green" href="#">
-                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="green" />
                     </a>
                     <a class="purple" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="purple" />

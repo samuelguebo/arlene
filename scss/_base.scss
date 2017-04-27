@@ -384,6 +384,9 @@ background: #FFF;
 .slider-wrapper .slider-caption .panel .post-item-title a{
     color:$secondary-color;
 }
+.slider-wrapper .slider-caption .panel .post-item-title a:hover{
+    color:$primary-color;
+}
 
 .orbit-bullets {
     display: block;
@@ -1322,7 +1325,7 @@ article .post-item-date {
 table,
 th,
 td {
-    border: 1px solid $extra-light-color;
+    border: 1px solid $border-color;
 }
 
 table {

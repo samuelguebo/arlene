@@ -347,37 +347,6 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
         }
     }
 }
-    /*
-     * Get content out of the_custom_logo()
-     */
-    
-    function arlene_get_custom_logo() {
-        if(has_custom_logo()) {
-            $custom_logo_id = get_theme_mod( 'custom_logo' );
-            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-            return $image[0];
-        }else {
-            return get_template_directory_uri().'/img/arlene_logo.png';
-        }
-    }
-    add_filter( 'the_custom_logo', 'arlene_body_classes' );
-    
-    /*
-     * Do the typing machine thing
-     *
-     */
-     function arlene_typing_machine(){
-         $text = "a minimalist woodstyle theme/ it looks like wood/ and tastes like soup.";
-         if(get_theme_mod( 'typing_text' ) && ""!=get_theme_mod( 'typing_text' )) {
-            $text = get_theme_mod( 'typing_text' );
-         }
-         $lines = explode('/', $text);
-         foreach($lines as $line){
-             echo '<p>';
-                echo $line;
-             echo '</p>';
-         }
-     }
     
     /*
      * Getters for customizer options
