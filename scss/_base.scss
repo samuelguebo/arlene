@@ -1448,21 +1448,7 @@ img.alignright {
     border-left: none;
 
     }
-    .top-bar-section .dropdown li.title.back h5 a::before{
-        font-family: $icon-font;
-        content: '\f053';
-        font-size: 0.8em;
-        border:none;
-        color:$primary-color;
-        padding-right: 10px;
-    }
-    .top-bar-section .dropdown li.title.back h5 a{
-        color: #FFF;
-    }
-    .top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
-        color: $primary-color;
-        display: block;
-    }
+
     .top-bar-section .has-dropdown > a::after {
         font-family: $icon-font;
         content: '\f054';
@@ -1817,7 +1803,7 @@ meta.foundation-mq-topbar {
       padding-right: 2.1875rem !important; }
       .top-bar-section .has-dropdown > a:after {
         border: none;
-        content: "";
+        /*content: "";*/
         display: block;
         height: 0;
         width: 0;
@@ -1924,4 +1910,20 @@ meta.foundation-mq-topbar {
     overflow: visible;
     clip: auto;
     display: block;
-    position: absolute !important; } }
+    position: absolute !important; } 
+}
+.top-bar-section .dropdown li.title.back a::before{
+    font-family: $icon-font;
+    content: '\f053';
+    font-size: 0.8em;
+    border:none;
+    color:$primary-color;
+    padding-right: 10px;
+}
+.top-bar-section .dropdown li.title.back a{
+    color: $link-color;
+}
+.top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
+    color: $primary-color;
+    display: block;
+}

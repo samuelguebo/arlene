@@ -1229,21 +1229,6 @@ img.alignright {
   .main-nav > li {
     border-left: none; }
 
-  .top-bar-section .dropdown li.title.back h5 a::before {
-    font-family: "FontAwesome";
-    content: '\f053';
-    font-size: 0.8em;
-    border: none;
-    color: #e34a00;
-    padding-right: 10px; }
-
-  .top-bar-section .dropdown li.title.back h5 a {
-    color: #FFF; }
-
-  .top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
-    color: #e34a00;
-    display: block; }
-
   .top-bar-section .has-dropdown > a::after {
     font-family: "FontAwesome";
     content: '\f054';
@@ -1620,7 +1605,7 @@ meta.foundation-mq-topbar {
 
   .top-bar-section .has-dropdown > a:after {
     border: none;
-    content: "";
+    /*content: "";*/
     display: block;
     height: 0;
     width: 0;
@@ -1748,6 +1733,21 @@ meta.foundation-mq-topbar {
     clip: auto;
     display: block;
     position: absolute !important; } }
+.top-bar-section .dropdown li.title.back a::before {
+  font-family: "FontAwesome";
+  content: '\f053';
+  font-size: 0.8em;
+  border: none;
+  color: #e34a00;
+  padding-right: 10px; }
+
+.top-bar-section .dropdown li.title.back a {
+  color: #e34a00; }
+
+.top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
+  color: #e34a00;
+  display: block; }
+
 .orbit-bullets li {
   border: solid 1px #e34a00; }
 

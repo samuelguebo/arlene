@@ -43,8 +43,8 @@ If you didn't use featured images you can install the [Easy Add Thumbnail](http:
 This theme has loads of customization options available. To open WordPress Customizer go to **Appearance > Customize**. There you will find the following sections:
 #### Header
 Change the header image. It might support a random image list.
-#### Social links
-Set the link for Facebook, Twitter, youtube and other social networks.
+#### Social links Menu
+Set the link for Facebook, Twitter, youtube and other social networks via the Menu. Check the [Demo section](#live_demo_and_instructions)
 
 #### Colors
  Arlene comes with six flavors: blue, green, red, orange, yellow, and chocolate. You might switch between these colors using the Customizer.
@@ -62,6 +62,9 @@ In this theme we are using a default [WordPress template hierarchy](http://codex
 
 **/js/** - Theme javascript files.
 
+
+## Live demo and instructions
+To be filled shortly with more details.
 
 ## License
 

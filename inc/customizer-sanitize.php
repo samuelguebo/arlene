@@ -5,22 +5,6 @@
  * @package Arlene
  */
 
-/* Text */
-
-function arlene_sanitize_text( $str ) {
-    $filtered = _sanitize_text_fields( $str, false );
- 
-    /**
-     * Filters a sanitized text field string.
-     *
-     * @since 2.9.0
-     *
-     * @param string $filtered The sanitized string.
-     * @param string $str      The string prior to being sanitized.
-     */
-    return apply_filters( 'sanitize_text_field', $filtered, $str );
-}
-
 /* Textarea */
 
 function arlene_sanitize_textarea($input) {

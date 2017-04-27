@@ -353,33 +353,17 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
      *
      */
      function arlene_get_events_label(){
-         $text = __("Events", "arlene");
-         if(get_theme_mod( 'events_label' ) && ""!=get_theme_mod( 'events_label' )) {
-            $text = get_theme_mod( 'events_label' );
-         }
-         return $text;
+         return get_theme_mod( 'events_label' );
      }
     function arlene_get_events_page(){
-         $text = "#";
-         if(get_theme_mod( 'events_page' ) && ""!=get_theme_mod( 'events_page' )) {
-            $text = get_theme_mod( 'events_page' );
-         }
-         return $text;
+        return get_theme_mod( 'events_page' );
      }
     
     function arlene_get_programmes_label(){
-         $text = __("Our programmes", "arlene");
-         if(get_theme_mod( 'programmes_label' ) && ""!=get_theme_mod( 'programmes_label' )) {
-            $text = get_theme_mod( 'programmes_label' );
-         }
-         return $text;
+        return get_theme_mod( 'programmes_label' );
      }
     function arlene_get_programmes_page(){
-        $text = "#"; 
-        if(get_theme_mod( 'programmes_page' ) && ""!=get_theme_mod( 'programmes_page' )) {
-            $text = get_theme_mod( 'programmes_page' );
-         }
-         return $text;
+        return  get_theme_mod( 'programmes_page' );
      }
         
     /*
@@ -446,7 +430,7 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
 
         foreach( $columns as $key => $title ) {
             if ( $key == 'title' ) // Put the Thumbnail column before the Title column
-                $new['featured_thumb'] = __( 'Image');
+                $new['featured_thumb'] = __( 'Image','arlene');
             $new[$key] = $title;
         }
         return $new;
@@ -472,45 +456,45 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
      * inspired by @http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
      *
      */
-    add_action( 'init', 'acajou_register_nav_menus' );
+    add_action( 'init', 'arlene_register_nav_menus' );
 
-    function acajou_register_nav_menus() {
-        register_nav_menu( 'social', __( 'Social', 'acajou' ) );
+    function arlene_register_nav_menus() {
+        register_nav_menu( 'social', __( 'Social', 'arlene' ) );
     }
 
     /*
-     * A function for creating  Custom Post Types (CPT)
+     * Creating  Custom Post Types (CPT)
      * @link http://www.wpbeginner.com/wp-tutorials/how-to-create-custom-post-types-in-wordpress/
      */
 
-    function arlene_register_post_type($singular,$plural,$taxonomies, $description, $icon) {
+    function arlene_register_event_post_type() {
         // Set UI labels for Custom Post Type
         $labels = array(
-            'name'                => _x( ucfirst($plural), 'Post Type General Name', 'arlene' ),
-            'singular_name'       => _x( ucfirst($singular), 'Post Type Singular Name', 'arlene' ),
-            'menu_name'           => __( ucfirst($plural), 'arlene' ),
-            'parent_item_colon'   => __( 'Parent '.ucfirst($singular), 'arlene' ),
-            'all_items'           => __( 'All '.ucfirst($plural), 'arlene' ),
-            'view_item'           => __( 'View '.ucfirst($singular), 'arlene' ),
-            'add_new_item'        => __( 'Add New '.ucfirst($singular), 'arlene' ),
-            'add_new'             => __( 'Add '.ucfirst($singular), 'arlene' ),
-            'edit_item'           => __( 'Edit '.ucfirst($singular), 'arlene' ),
-            'update_item'         => __( 'Update '.ucfirst($singular), 'arlene' ),
-            'search_items'        => __( 'Search '.ucfirst($singular), 'arlene' ),
+            'name'                => _x( 'Event', 'Event', 'arlene'),
+            'singular_name'       => _x( 'Event', 'Event', 'arlene' ),
+            'menu_name'           => __( 'Events', 'arlene' ),
+            'parent_item_colon'   => __( 'Parent', 'arlene' ),
+            'all_items'           => __( 'All', 'arlene' ),
+            'view_item'           => __( 'View', 'arlene' ),
+            'add_new_item'        => __( 'Add New', 'arlene' ),
+            'add_new'             => __( 'Add', 'arlene' ),
+            'edit_item'           => __( 'Edit', 'arlene' ),
+            'update_item'         => __( 'Update', 'arlene' ),
+            'search_items'        => __( 'Search', 'arlene' ),
             'not_found'           => __( 'Not Found', 'arlene' ),
             'not_found_in_trash'  => __( 'Not found in Trash', 'arlene' ),
         );
 
-    // Set other options for Custom Post Type
+        // Set other options for Custom Post Type
 
         $args = array(
-            'label'               => __( $plural, 'arlene' ),
-            'description'         => __( $description, 'arlene' ),
+            'label'               => __( 'Events', 'arlene' ),
+            'description'         => __( 'Past and future events', 'arlene' ),
             'labels'              => $labels,
             // Features this CPT supports in Post Editor
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             // You can associate this CPT with a taxonomy or custom taxonomy. 
-            'taxonomies'          => $taxonomies,
+            'taxonomies'          => array('categories'),
             /* A hierarchical CPT is like Pages and can have
             * Parent and child items. A non-hierarchical CPT
             * is like Posts.
@@ -522,20 +506,68 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
             'show_in_nav_menus'   => true,
             'show_in_admin_bar'   => true,
             'menu_position'       => 5,
-            'menu_icon'           => $icon,
+            'menu_icon'           => 'dashicons-calendar-alt',
             'can_export'          => true,
             'has_archive'         => true,
             'exclude_from_search' => false,
             'publicly_queryable'  => true,
             'capability_type'     => 'page',
         );
-            register_post_type($singular, $args);
+        register_post_type('Event', $args);
+    }
+    function arlene_register_programme_post_type() {
+        // Set UI labels for Custom Post Type
+        $labels = array(
+            'name'                => _x( 'Programme', 'Programme', 'arlene'),
+            'singular_name'       => _x( 'Programme', 'Programme', 'arlene' ),
+            'menu_name'           => __( 'Programmes', 'arlene' ),
+            'parent_item_colon'   => __( 'Parent', 'arlene' ),
+            'all_items'           => __( 'All', 'arlene' ),
+            'view_item'           => __( 'View', 'arlene' ),
+            'add_new_item'        => __( 'Add New', 'arlene' ),
+            'add_new'             => __( 'Add', 'arlene' ),
+            'edit_item'           => __( 'Edit', 'arlene' ),
+            'update_item'         => __( 'Update', 'arlene' ),
+            'search_items'        => __( 'Search', 'arlene' ),
+            'not_found'           => __( 'Not Found', 'arlene' ),
+            'not_found_in_trash'  => __( 'Not found in Trash', 'arlene' ),
+        );
+
+        // Set other options for Custom Post Type
+
+        $args = array(
+            'label'               => __( 'Programmes', 'arlene' ),
+            'description'         => __( 'List of programmes', 'arlene' ),
+            'labels'              => $labels,
+            // Features this CPT supports in Post Editor
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            // You can associate this CPT with a taxonomy or custom taxonomy. 
+            'taxonomies'          => array('categories'),
+            /* A hierarchical CPT is like Pages and can have
+            * Parent and child items. A non-hierarchical CPT
+            * is like Posts.
+            */	
+            'hierarchical'        => false,
+            'public'              => true,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 5,
+            'menu_icon'           => 'dashicons-portfolio',
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => false,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        );
+        register_post_type('Programme', $args);
     }
 
     function arlene_custom_post_types() {
         // Registering your Custom Post Type
-        arlene_register_post_type('programme','programmes', array('categories'), 'Programmes','dashicons-portfolio');
-        arlene_register_post_type('event','events', array('categories'), 'Past and future events','dashicons-calendar-alt');
+        arlene_register_programme_post_type();
+        arlene_register_event_post_type();
     }
 
     add_action( 'init', 'arlene_custom_post_types', 0 );

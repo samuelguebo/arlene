@@ -5,300 +5,365 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: WPML_EXPORT_acajou\n"
+"Project-Id-Version:WPML_EXPORT_arlene\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Samuel Guebo <samuelguebo@gmail.com>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
-"Language: es\n"
+"Language:es\n"
 "MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.5.4\n"
 
-# wpml-name: 1bae563ac73d8764dc25047a4b779d41
-#: "from_text", array( "label" => __("Replace the defaut « From blog »
-#: text", "acajou"),
-msgid "Replace the defaut &laquo; From the blog &raquo; text"
-msgstr "Sustituir el título \"Noticias\""
+#: 'menu_name'           => __( 'Events', 'arlene' ),
+#: 'parent_item_colon'   => __( 'Parent', 'arlene' ),
+#: 'all_items'           => __( 'All', 'arlene' ),
+# wpml-name: b1c94ca2fbc3e78fc30069c8d0f01680
+msgid "All"
+msgstr "Todos"
 
-# wpml-name: e9e838e8eb8a156d2989faa260244799
-#: // Create sections for socials links
-#: $wp_customize->add_section("acajou_from_section", array( "title" =>
-#: __("From the blog", "acajou"),
-msgid "From the blog"
-msgstr "Noticias"
-
-# wpml-name: dc754740f7de8b013feff530324c71b8
-#: "typing_text", array( "label" => __("Type your text and use slash (/) for
-#: creating several sentences", "acajou"),
-msgid "Type your text and use slash (/) for creating several sentences"
-msgstr "Escriba su texto y utilice la barra (/) para crear varias oraciones"
-
-# wpml-name: 0eae6a1413df83696f931b200ba47561
-#: // Create sections for socials links
-#: $wp_customize->add_section("acajou_typing_section", array( "title" =>
-#: __("Typing machine", "acajou"),
-msgid "Typing machine"
-msgstr "Máquina de escribir"
-
-# wpml-name: 7dce122004969d56ae2e0245cb754d35
-#: <a href="<?php the_permalink();?>" class="small button
-#: post-item-buttom"><?php _e('Read more','acajou')?></a> <?php if (
-#: get_edit_post_link() ) : ?> echo get_edit_post_link();?>" alert"><i
-#: class="fa fa-edit"></i> _e('Edit','acajou')?></a>
-msgid "Edit"
-msgstr "Editar"
-
-# wpml-name: bfd56f3cafc12f6317ae3351ad712eff
-#: } elseif ( is_404() ) { echo $before .__('Error 404','acajou') . $after;
-msgid "Error 404"
-msgstr "Error 404"
-
-# wpml-name: 111c1a6419c01b8dcb3ee6ea8f3a291b
-#: global $author; $userdata = get_userdata($author); echo $before .
-#: __('Articles posted by ','acajou') $userdata->display_name $after;
-msgid "Articles posted by "
-msgstr "artículos publicados por"
-
-# wpml-name: 01f9dd31a3153c5998aa885b33565592
-#: $thisCat = get_category(get_query_var('cat'), false); if ($thisCat->parent
-#: != 0) echo get_category_parents($thisCat->parent, TRUE, ''); $before .
-#: __('Archive by category ','acajou').'"' single_cat_title('', false) '"'
-#: $after;
-msgid "Archive by category "
-msgstr "Archivo por categoría"
-
-# wpml-name: 99dea78007133396a7b8ed70578ac6ae
-msgid "Login"
-msgstr "Iniciar sesión"
-
-# wpml-name: eb92025cb8c66f1850c13a9b602a1856
-msgid "Show all"
-msgstr "Mostrar todo"
-
-# wpml-name: e28217bbf3a9d5af3f3e1c010455aa48
-msgid "Results for \""
-msgstr "Resultado de la busqueda \""
-
+#: 'edit_item'           => __( 'Edit', 'arlene' ),
+#: 'update_item'         => __( 'Update', 'arlene' ),
+#: 'search_items'        => __( 'Search', 'arlene' ),
 # wpml-name: 13348442cc6a27032d2b4aa28b75a5d3
 msgid "Search"
 msgstr "Buscar"
 
-# wpml-name: 7b84b1e37f72d12ede40f96f8b1c941e
-msgid "Search for …"
-msgstr "Buscar …"
+#: 'add_new'             => __( 'Add', 'arlene' ),
+#: 'edit_item'           => __( 'Edit', 'arlene' ),
+#: 'update_item'         => __( 'Update', 'arlene' ),
+# wpml-name: 06933067aafd48425d67bcb01bba5cb6
+msgid "Update"
+msgstr "Actualizar"
 
+#: 'add_new_item'        => __( 'Add New', 'arlene' ),
+#: 'add_new'             => __( 'Add', 'arlene' ),
+#: 'edit_item'           => __( 'Edit', 'arlene' ),
+# wpml-name: 7dce122004969d56ae2e0245cb754d35
+msgid "Edit"
+msgstr "Editar"
+
+#: 'view_item'           => __( 'View', 'arlene' ),
+#: 'add_new_item'        => __( 'Add New', 'arlene' ),
+#: 'add_new'             => __( 'Add', 'arlene' ),
+# wpml-name: ec211f7c20af43e742bf2570c3cb84f9
+msgid "Add"
+msgstr "Añadir"
+
+#: 'all_items'           => __( 'All', 'arlene' ),
+#: 'view_item'           => __( 'View', 'arlene' ),
+#: 'add_new_item'        => __( 'Add New', 'arlene' ),
+# wpml-name: de9ced9bf5e9829de4a93ad8c9d7a170
+msgid "Add New"
+msgstr "Crear"
+
+#: 'parent_item_colon'   => __( 'Parent', 'arlene' ),
+#: 'all_items'           => __( 'All', 'arlene' ),
+#: 'view_item'           => __( 'View', 'arlene' ),
+# wpml-name: 4351cfebe4b61d8aa5efa1d020710005
+msgid "View"
+msgstr "Ver"
+
+#: 'singular_name'       => _x( 'Event', 'Event', 'arlene' ),
+#: 'menu_name'           => __( 'Events', 'arlene' ),
+#: 'parent_item_colon'   => __( 'Parent', 'arlene' ),
+# wpml-name: 30269022e9d8f51beaabb52e5d0de2b7
+msgid "Parent"
+msgstr "Padre"
+
+#: // Set UI labels for Custom Post Type
+#: $labels = array(
+#: 'name'                => _x( 'Programme', 'Programme', 'arlene'),
+# wpml-name: 8913b656c6e9f6b62349a6b95c255c23
+msgctxt "Programme"
+msgid "Programme"
+msgstr "Proyecto"
+
+#: // Set UI labels for Custom Post Type
+#: $labels = array(
+#: 'name'                => _x( 'Event', 'Event', 'arlene'),
+# wpml-name: a4ecfc70574394990cf17bd83df499f7
+msgctxt "Event"
+msgid "Event"
+msgstr "Evento"
+
+#: $args = array(
+#: 'label'               => __( 'Programmes', 'arlene' ),
+#: 'description'         => __( 'List of programmes', 'arlene' ),
+# wpml-name: d9a856dc623cfc8a5dd9e9fefa755bc4
+msgid "List of programmes"
+msgstr "Lista de proyectos"
+
+#: $args = array(
+#: 'label'               => __( 'Events', 'arlene' ),
+#: 'description'         => __( 'Past and future events', 'arlene' ),
+# wpml-name: 2687d5a9da1ebbf24414547072c388ea
+msgid "Past and future events"
+msgstr "Eventos pasados y futuros"
+
+#: 
+#: function arlene_register_nav_menus() {
+#: register_nav_menu( 'social', __( 'Social', 'arlene' ) );
+# wpml-name: f431e17ea0081a3c9e51fc240221ee21
+msgid "Social"
+msgstr "Social"
+
+#: foreach( $columns as $key => $title ) {
+#: if ( $key == 'title' ) // Put the Thumbnail column before the Title column
+#: $new['featured_thumb'] = __( 'Image','arlene');
+# wpml-name: be53a0541a6d36f6ecb879fa2c584b08
+msgid "Image"
+msgstr "Imagen"
+
+#: <div class="medium-4 large-3 columns"> <?php echo get_avatar( get_the_author_meta('ID'), 120 ); ?> </div>
+#: <div class="medium-8 large-9 columns">
+#: <h3><?php _e('About the author','arlene'); ?></h3>
 # wpml-name: de9fbb31a77fd14bb6228f52d6e1907c
-#: <div class="small-3 large-3 columns"> <?php echo get_avatar(
-#: get_the_author_meta( get_the_author_meta('ID') ), 120 ); ?> </div>
-#: class="small-9 large-9 <h3><?php _e('About the author','acajou'); ?></h3>
 msgid "About the author"
 msgstr "El autor"
 
+#: <?php $tags = get_the_tags(get_the_ID());
+#: if ( $tags ): ?>
+#: <span><?php _e('tags','arlene');?></span>
+# wpml-name: d57ac45256849d9b13e2422d91580fb9
+msgid "tags"
+msgstr "palabras clave"
+
+#: <?php $categories = get_the_category();
+#: if ( $categories ): ?>
+#: <span><?php _e('categories','arlene');?></span>
+# wpml-name: b0b5ccb4a195a07fd3eed14affb8695f
+msgid "categories"
+msgstr "categorías"
+
+#: <p><?php echo arlene_new_excerpt_length(100);?></p>
+#: 
+#: <a href="<?php the_permalink();?>" class="small button"><?php _e('Read more','arlene')?></a>
 # wpml-name: 43340e6cc4e88197d57f8d6d5ea50a46
-#: <h6 class="post-item-title"><a href="<?php the_permalink();?>"><?php
-#: the_title();?></a></h6> <p><?php the_excerpt();?></p> <a
-#: the_permalink();?>" class="small button post-item-buttom"><?php _e('Read
-#: more','acajou')?></a>
 msgid "Read more"
 msgstr "Leer mas"
 
+#: <div class="post-item-caption">
+#: <div class="post-list columns">
+#: <h4><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'arlene' ); ?></h4>
 # wpml-name: 4783397292b42b601dee3397f9ca05f9
-#: <div class="post-list not-found columns"> <h4><?php esc_html_e( 'It looks
-#: like nothing was found at this location. Maybe try one of the links below
-#: or a search?', 'acajou' ); ?></h4>
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Parece que no se encuentra la página que busca. Tal vez deba usar los "
-"enlaces de abajo o realizar una busqueda"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Parece que no se encuentra la página que busca. Tal vez deba usar los enlaces de abajo o realizar una busqueda"
 
+#: <div class="row collapse">
+#: <div class="small-10 columns">
+#: <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'arlene' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 # wpml-name: 29042a31d997c996f52c1d2fd4ad813d
-#: <div class="row collapse"> class="small-10 columns"> <input type="search"
-#: class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;',
-#: 'placeholder', 'acajou' ); ?>" value="<?php get_search_query(); name="s" />
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Buscar …"
 
-# wpml-name: b61541208db7fa7dba42c85224405911
-#: <li class="name"> </li> class="toggle-topbar menu-icon"><a
-#: href="#"><span><?php esc_html_e( 'Menu', 'acajou' );?></span></a></li>
-msgid "Menu"
-msgstr "Menu"
+#: <p class="call-to-action">
+#: 
+#: <a href="<?php the_permalink(arlene_get_events_page());?>" class="small button radius"><?php _e('All events','arlene')?></a>
+# wpml-name: 1aafb073a1a78e52e044177f67da6615
+msgid "All events"
+msgstr "Todos los eventos"
 
-# wpml-name: e9bb25dd73430089cf962dd6a73824da
-#: } elseif ( is_404() ) { echo __('Sorry, not found','acajou');
-msgid "Sorry, not found"
-msgstr "Oooh!! La página no existe"
+#: </div>
+#: <p class="call-to-action clearfix">
+#: <a href="<?php the_permalink(arlene_get_programmes_page());?>" class="small button post-item-buttom radius"><?php _e('All programmes','arlene')?></a>
+# wpml-name: 589c486dfe514e75072c9330a4f514f6
+msgid "All programmes"
+msgstr "Todos los proyectos"
 
-# wpml-name: 583f75b52c16a2ef51b8fb8612338b26
-#: global $author; $userdata = get_userdata($author); echo __('Articles
-#: written by ','acajou') . $userdata->display_name;
-msgid "Articles written by "
-msgstr "Artículos escritos por"
+#: 'search_items'        => __( 'Search', 'arlene' ),
+#: 'not_found'           => __( 'Not Found', 'arlene' ),
+#: 'not_found_in_trash'  => __( 'Not found in Trash', 'arlene' ),
+# wpml-name: 912f42b76bbd83121cd8298800d56b44
+msgid "Not found in Trash"
+msgstr "No encontrado en la basura"
 
-# wpml-name: 6df1ab400da4c77b3b3ea8f38397ba60
-#: } elseif ( is_search() ) { echo $before . __('Results for ','acajou').
-#: get_search_query() '"' $after;
-msgid "Results for "
-msgstr "Resultados para"
+#: 'update_item'         => __( 'Update', 'arlene' ),
+#: 'search_items'        => __( 'Search', 'arlene' ),
+#: 'not_found'           => __( 'Not Found', 'arlene' ),
+# wpml-name: 9d1ead73e678fa2f51a70a933b0bf017
+msgid "Not Found"
+msgstr "No encontrado"
 
-# wpml-name: 193cfc9be3b995831c6af2fea6650e60
-#: if ( get_query_var('paged') ) { is_category() || is_day() is_month()
-#: is_year() is_search() is_tag() is_author() echo ' ('; __('Page','acajou') .
-#: get_query_var('paged');
-msgid "Page"
-msgstr "Página"
+#: 
+#: } elseif ( is_404() ) {
+#: echo $before .__('Error 404','arlene')  . $after;
+# wpml-name: bfd56f3cafc12f6317ae3351ad712eff
+msgid "Error 404"
+msgstr "Error 404"
 
+#: global $author;
+#: $userdata = get_userdata($author);
+#: echo $before . __('Articles posted by ','arlene') . $userdata->display_name . $after;
+# wpml-name: 111c1a6419c01b8dcb3ee6ea8f3a291b
+msgid "Articles posted by "
+msgstr "artículos publicados por"
+
+#: $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+#: $delimiter = '/'; // delimiter between crumbs
+#: $home = __('Home','arlene'); // text for the 'Home' link
 # wpml-name: 8cf04a9734132302f96da8e113e80ce5
-#: $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 don't
-#: $delimiter '/'; delimiter between crumbs $home __('Home','acajou'); text
-#: for 'Home' link
 msgid "Home"
 msgstr "Inicio"
 
+#: 'programmes_label',
+#: array(
+#: 'label' => __('Label for the Programmes section on homepage', 'arlene'),
+# wpml-name: 50bba4e90c993be783bd4994d69c7db5
+msgid "Label for the Programmes section on homepage"
+msgstr "Título de la sección Proyectos en la página de inicio"
+
+#: 'programmes_page',
+#: array(
+#: 'label' => __('Set what page must be used for listing the programmes.', 'arlene'),
+# wpml-name: 7f51c468908c31ed6c7c10472c401945
+msgid "Set what page must be used for listing the programmes."
+msgstr "Establezca la página que se debe utilizar para la lista de los eventos."
+
+#: // Create sections for Programmes settings
+#: $wp_customize->add_section('arlene_programmes_section', array(
+#: 'title' => __('Programmes', 'arlene'),
+# wpml-name: b9ad95edffd6e8e9549337e28fba4435
+msgid "Programmes"
+msgstr "Proyectos"
+
+#: 'events_label',
+#: array(
+#: 'label' => __('Label for the Events section on homepage', 'arlene'),
+# wpml-name: 98ded0c0ffd55de9af47c3a1f099915b
+msgid "Label for the Events section on homepage"
+msgstr "Título de la sección Eventos en la página de inicio"
+
+#: 'events_page',
+#: array(
+#: 'label' => __('Set what page must be used for listing the events.', 'arlene'),
+# wpml-name: d5b179dad055267ac6eea7e783619c16
+msgid "Set what page must be used for listing the events."
+msgstr "Establezca la página que se debe utilizar para la lista de los eventos."
+
+#: // Create sections for Events settings
+#: $wp_customize->add_section('arlene_events_section', array(
+#: 'title' => __('Events', 'arlene'),
+# wpml-name: 87f9f735a1d36793ceaecd4e47124b63
+msgid "Events"
+msgstr "Eventos"
+
+#: new Palette_Custom_Control(
+#: $wp_customize, 'arlene_theme_color', array(
+#: 'label' => __( 'Theme color', 'arlene' ),
 # wpml-name: 45e035baf33a8e403766a606457f8b10
-#: new Palette_Custom_Control( $wp_customize, 'acajou_theme_color', array(
-#: 'label' => __( 'Theme color', 'acajou' ),
 msgid "Theme color"
 msgstr "Color del tema"
 
-# wpml-name: 582d0217bdd3280c7fef224c83846d47
-#: "github_url", array( "label" => __("Enter Github url", "acajou"),
-msgid "Enter Github url"
-msgstr "Enalace Github"
-
-# wpml-name: e3df3e1b4dda1804819fa7282c2ca0b7
-#: "youtube_url", array( "label" => __("Enter Youtube url", "acajou"),
-msgid "Enter Youtube url"
-msgstr "Enlace Youtube"
-
-# wpml-name: 13e90aa88383d670e2628878822f7515
-#: "twitter_url", array( "label" => __("Enter Twitter url", "acajou"),
-msgid "Enter Twitter url"
-msgstr "Enlace de Twitter"
-
-# wpml-name: dfc2e158e98af501bceb60aef0532dd3
-#: "facebook_url", array( "label" => __("Enter Facebook url", "acajou"),
-msgid "Enter Facebook url"
-msgstr "Enlace de Facebook"
-
-# wpml-name: 07c2799ee9c0898531b00af6694eb4cd
-#: // Create sections for socials links
-#: $wp_customize->add_section("acajou_social_links", array( "title" =>
-#: __("Social links", "acajou"),
-msgid "Social links"
-msgstr "Redes sociales"
-
+#: ) );
+#: register_sidebar( array(
+#: 'name'          => esc_html__( 'Footer', 'arlene' ),
 # wpml-name: ded40f2a77c30efc6062db0cbd857746
-#: ) ); register_sidebar( array( 'name' => esc_html__( 'Footer', 'acajou' ),
 msgid "Footer"
 msgstr "Footer"
 
+#: 'name'          => esc_html__( 'Sidebar', 'arlene' ),
+#: 'id'            => 'sidebar-1',
+#: 'description'   => esc_html__( 'Add widgets here.', 'arlene' ),
 # wpml-name: 5234c7d4d29fadd5614763897c8332c5
-#: 'name' => esc_html__( 'Sidebar', 'acajou' ), 'id' 'sidebar-1',
-#: 'description' 'Add widgets here.',
 msgid "Add widgets here."
 msgstr "Añadir widgets aquí."
 
+#: function arlene_widgets_init() {
+#: register_sidebar( array(
+#: 'name'          => esc_html__( 'Sidebar', 'arlene' ),
 # wpml-name: 219ff7705d67d0c798779951dcf82e95
-#: function acajou_widgets_init() { register_sidebar( array( 'name' =>
-#: esc_html__( 'Sidebar', 'acajou' ),
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
+#: // This theme uses wp_nav_menu() in one location.
+#: register_nav_menus( array(
+#: 'primary' => esc_html__( 'Primary', 'arlene' ),
 # wpml-name: 074de7e7c226d5c60f8af14c20725352
-#: // This theme uses wp_nav_menu() in one location. register_nav_menus(
-#: array( 'primary' => esc_html__( 'Primary', 'acajou' ),
 msgid "Primary"
 msgstr "Principal"
 
+#: <div class="row">
+#: <div class="medium-6 large-6 columns">
+#: <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a></p>
 # wpml-name: d6c4a6ac6a732b8db88d1cfe32b5b44e
-#: <div class="row"> class="small-6 large-6 columns"> <p
-#: class="copyright"><?php _e('Developed by ','acajou')?>Samuel Guebo.<br><a
-#: href="<?php echo esc_url( __( 'https://wordpress.org/', 'acajou' ) );
-#: ?>"><?php printf( esc_html__( 'Proudly powered %s', ), 'WordPress' ?></a>
-#: <?php _e('and available on','acajou')?> <a
-#: href="https://github.com/samuelguebo/acajou"><i class="fa fa-github"></i>
-#: Github</a></p>
 msgid "and available on"
 msgstr "y disponible en "
 
+#: <div class="row">
+#: <div class="medium-6 large-6 columns">
+#: <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a></p>
 # wpml-name: e2b8f1326fea2c94cdc3bccda878a9d6
-#: <div class="row"> class="small-6 large-6 columns"> <p
-#: class="copyright"><?php _e('Developed by ','acajou')?>Samuel Guebo.<br><a
-#: href="<?php echo esc_url( __( 'https://wordpress.org/', 'acajou' ) );
-#: ?>"><?php printf( esc_html__( 'Proudly powered %s', ), 'WordPress' ?></a>
-#: <?php _e('and available on','acajou')?> <a
-#: href="https://github.com/samuelguebo/acajou"><i class="fa fa-github"></i>
-#: Github</a></p>
 msgid "Developed by "
 msgstr "Desarrollado por"
 
+#: <div class="row">
+#: <div class="medium-6 large-6 columns">
+#: <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a></p>
 # wpml-name: a657bb99c4349a9510fe2a5585e30a15
-#: <div class="row"> class="small-6 large-6 columns"> <p
-#: class="copyright"><?php _e('Developed by ','acajou')?>Samuel Guebo.<br><a
-#: href="<?php echo esc_url( __( 'https://wordpress.org/', 'acajou' ) );
-#: ?>"><?php printf( esc_html__( 'Proudly powered %s', ), 'WordPress' ?></a>
-#: <?php _e('and available on','acajou')?> <a
-#: href="https://github.com/samuelguebo/acajou"><i class="fa fa-github"></i>
-#: Github</a></p>
 msgid "Proudly powered by %s"
 msgstr "Felizmente alimentado por %s"
 
+#: <div class="row">
+#: <div class="medium-6 large-6 columns">
+#: <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a></p>
 # wpml-name: 71a7765c3d553e44aaa308159b5a2ba6
-#: <div class="row"> class="small-6 large-6 columns"> <p
-#: class="copyright"><?php _e('Developed by ','acajou')?>Samuel Guebo.<br><a
-#: href="<?php echo esc_url( __( 'https://wordpress.org/', 'acajou' ) );
-#: ?>"><?php printf( esc_html__( 'Proudly powered %s', ), 'WordPress' ?></a>
-#: <?php _e('and available on','acajou')?> <a
-#: href="https://github.com/samuelguebo/acajou"><i class="fa fa-github"></i>
-#: Github</a></p>
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
+#: <?php
+#: printf( // WPCS: XSS OK.
+#: esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'arlene' ) ),
 # wpml-name: ed9e37872f818f1e8903eba505917478
-#: <?php printf( // WPCS: XSS OK. esc_html( _nx( 'One thought on
-#: &ldquo;%2$s&rdquo;', '%1$s thoughts get_comments_number(), 'comments
-#: title', 'acajou' ) ),
 msgctxt "comments title"
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr "%1$s comentarios sobre “%2$s”"
 
+#: <?php
+#: printf( // WPCS: XSS OK.
+#: esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'arlene' ) ),
 # wpml-name: 5e842f65391c3945c5d208be06d82896
-#: <?php printf( // WPCS: XSS OK. esc_html( _nx( 'One thought on
-#: &ldquo;%2$s&rdquo;', '%1$s thoughts get_comments_number(), 'comments
-#: title', 'acajou' ) ),
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgstr "Un comentario sobre “%2$s”"
 
+#: if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+#: 
+#: <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'arlene' ); ?></p>
 # wpml-name: 496c558a09bbbcfc869aa80b2f037261
-#: if ( ! comments_open() && get_comments_number() post_type_supports(
-#: get_post_type(), 'comments' ) : ?> <p class="no-comments"><?php esc_html_e(
-#: 'Comments are closed.', 'acajou' ); ?></p>
 msgid "Comments are closed."
 msgstr "Los comentarios han sido cerrados."
 
+#: <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+#: <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+#: <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'arlene' ); ?></h2>
 # wpml-name: 221b94a7f866d10d0b85b7886cea5d18
-#: <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) :
-#: // Are there comments to navigate through? ?> <nav id="comment-nav-above"
-#: class="navigation comment-navigation" role="navigation"> <h2
-#: class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'acajou'
-#: ); ?></h2>
 msgid "Comment navigation"
 msgstr "Navigación en los comentarios"
 
+#: 
+#: <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'arlene' ) ); ?></div>
+#: <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'arlene' ) ); ?></div>
 # wpml-name: 36eb7633eb95e849cb42a170ea48e2dc
-#: <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older
-#: Comments', 'acajou' ) ); ?></div> class="nav-next"><?php
-#: next_comments_link( 'Newer
 msgid "Newer Comments"
 msgstr "Nuevos comentarios"
 
+#: <div class="nav-links">
+#: 
+#: <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'arlene' ) ); ?></div>
 # wpml-name: 18ee891b4e245d0cea15e36769318ccd
-#: <div class="nav-links"> class="nav-previous"><?php previous_comments_link(
-#: esc_html__( 'Older Comments', 'acajou' ) ); ?></div>
 msgid "Older Comments"
 msgstr "Comentarios antiguos"
+
+#: 'mid_size' => 2,
+#: 'prev_text' => __( '&laquo;', 'arlene' ),
+#: 'next_text' => __( '&raquo;', 'arlene' ),
+# wpml-name: d0fbfc097c4fdbc0bc02e10243bd60fe
+msgid "&raquo;"
+msgstr "»"
+
+#: <?php the_posts_pagination( array(
+#: 'mid_size' => 2,
+#: 'prev_text' => __( '&laquo;', 'arlene' ),
+# wpml-name: a3332b79b0716cb7e3e4ec79a8b01048
+msgid "&laquo;"
+msgstr "«"

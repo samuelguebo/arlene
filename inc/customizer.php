@@ -52,7 +52,7 @@ function arlene_customize_register( $wp_customize ) {
     
     // Events page selector
     $wp_customize->add_setting('events_page', array(
-		'default' => '',
+		'default' => '#',
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
@@ -72,15 +72,15 @@ function arlene_customize_register( $wp_customize ) {
     $wp_customize->add_setting('events_label', array(
 		'default' => __('Events', 'arlene'),
 		'transport' => 'refresh',
-        'sanitize_callback'	=> 'arlene_sanitize_text'
+        'sanitize_callback'	=> 'sanitize_text_field'
 
 	));
     $wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'twitter_url',
+		'events_label',
 		array(
 			'label' => __('Label for the Events section on homepage', 'arlene'),
-			'section' => 'events_page',
+			'section' => 'arlene_events_section',
 			'settings' => 'events_label',
 			'type' => 'text',
 		)
@@ -99,14 +99,14 @@ function arlene_customize_register( $wp_customize ) {
     
     // Programmes page selector
     $wp_customize->add_setting('programmes_page', array(
-		'default' => '',
+		'default' => '#',
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
 	));
     $wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'arlene_programmes_page',
+		'programmes_page',
 		array(
 			'label' => __('Set what page must be used for listing the programmes.', 'arlene'),
 			'section' => 'arlene_programmes_section',
@@ -119,15 +119,15 @@ function arlene_customize_register( $wp_customize ) {
     $wp_customize->add_setting('programmes_label', array(
 		'default' => __('Programmes', 'arlene'),
 		'transport' => 'refresh',
-        'sanitize_callback'	=> 'arlene_sanitize_text'
+        'sanitize_callback'	=> 'sanitize_text_field'
 
 	));
     $wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'twitter_url',
+		'programmes_label',
 		array(
 			'label' => __('Label for the Programmes section on homepage', 'arlene'),
-			'section' => 'programmes_page',
+			'section' => 'arlene_programmes_section',
 			'settings' => 'programmes_label',
 			'type' => 'text',
 		)
