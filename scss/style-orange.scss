@@ -1,0 +1,20 @@
+$primary-color: #e34a00;
+$secondary-color: #921914;
+$menu-link-color: #6f6f6e;
+$dark-color: #020d16;
+$light-color: #FFF;
+$link-color: $primary-color;
+
+.orbit-bullets li {
+    border: solid 1px $link-color !important;
+}
+.orbit-bullets li.active {
+    background: $link-color !important;
+}
+.slider-wrapper .slider-caption .panel .post-item-title a{
+    color:$primary-color !important;
+}
+.slider-wrapper .slider-caption .panel .post-item-title a:hover{
+    color:$secondary-color !important;
+}
+@import 'base';

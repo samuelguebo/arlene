@@ -46,7 +46,7 @@ function arlene_sanitize_colors( $input, $setting ) {
 	$input = sanitize_key( $input );
 	
 	// Make sure the chosen colors exists among the available ones.
-    $colors = array('chocolate','blue', 'green', 'purple', 'red','yellow');
+    $colors = array('chocolate','blue', 'green', 'orange', 'red','yellow');
     if (in_array($input, $colors)) {
         $color = $input;
     }
