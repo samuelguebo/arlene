@@ -1,7 +1,7 @@
 # Arlene
 A WordPress theme for NGOs.
 
-[![arlene_top.png](https://s6.postimg.org/pfvhdmpr5/arlene_top.png)](https://postimg.org/image/zd6i6oxct/)
+[![arlene_screenshot.png](https://s6.postimg.org/fcjb55bvl/arlene_screenshot.png)](https://postimg.org/image/pzd4akk0t/)
 ## Description
 
 Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath. 
@@ -48,7 +48,7 @@ Set the link for Facebook, Twitter, youtube and other social networks.
 
 #### Colors
  Arlene comes with six flavors: blue, green, red, orange, yellow, and chocolate. You might switch between these colors using the Customizer.
-[![arlene_theme_showcase.jpg](https://s6.postimg.org/p9hsajgm9/arlene_theme_showcase.jpg)](https://postimg.org/image/5rn4uljod/).
+[![showcase_arlene_theme_wordpress.png](https://s6.postimg.org/9045vb8td/showcase_arlene_theme_wordpress.png)](https://postimg.org/image/y65425a3h/)
 
 
 ## File structure
@@ -78,11 +78,10 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 **The exceptions to this license are as follows:**
 
 - [Zurb Foundation](https://github.com/zurb/foundation-sites),for layout structure, under MIT License.
-- [FontAwesome](https://github.com/FortAwesome/Font-Awesome), under the SIL Open Font License.
+- [FontAwesome](https://github.com/FortAwesome/Font-Awesome) and [Montserrat](https://www.fontsquirrel.com/license/montserrat), under the SIL Open Font License.
 
 - [Commons images](https:commons.wikimedia.org), under Creative Commons By SA 4.0 License
 - [ScrollReveal](https://github.com/jlmakes/scrollreveal), under MIT License.
-- [Roboto](https://github.com/google/roboto), under Apache License 2.0 License.
 
 
 # Change log
