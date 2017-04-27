@@ -1,14 +1,15 @@
 <?php
-/**
- * Sample implementation of the Custom Header feature
- *
- * You can add an optional custom header image to header.php like so ...
- *
-	 *
- * @link https://developer.wordpress.org/themes/functionality/custom-headers/
- *
- * @package Arlene
- */
+/*
+================================================================================================
+Sample implementation of the Custom Header feature.
+================================================================================================
+@package        Arlene
+@link           https://developer.wordpress.org/themes/functionality/custom-headers/
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 
 /**
  * Set up the WordPress core custom header feature.

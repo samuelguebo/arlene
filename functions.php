@@ -1,11 +1,15 @@
 <?php
-/**
- * Arlene functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package Arlene
- */
+/*
+================================================================================================
+Arlene functions and definitions
+================================================================================================
+@package        Arlene
+@link           https://developer.wordpress.org/themes/basics/theme-functions/
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.co/)
+================================================================================================
+*/
 
 if ( ! function_exists( 'arlene_setup' ) ) :
 /**

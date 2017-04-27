@@ -1,12 +1,15 @@
 <?php
-/**
- * The template for displaying search forms
- *
- *
- * @link https://developer.wordpress.org/reference/functions/wp_nav_menu/
- * @link https://codex.wordpress.org/Class_Reference/Walker
- * @package Arlene
- */
+/*
+================================================================================================
+The template for displaying search forms
+================================================================================================
+@package        Arlene
+@link           https://developer.wordpress.org/reference/functions/get_search_form/
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">

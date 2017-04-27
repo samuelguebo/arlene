@@ -1,12 +1,15 @@
 <?php
-/**
- * Template part for displaying articles in loop
- *
- * @link https://codex.wordpress.org/The_Loop
- *
- * @package Arlene
- */
-
+/*
+================================================================================================
+Template part for displaying articles in loop
+================================================================================================
+@package        Arlene
+@link           https://codex.wordpress.org/The_Loop
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.co/)
+================================================================================================
+*/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class();?>>

@@ -1,12 +1,15 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Arlene
- */
-
+/*
+================================================================================================
+The template for displaying all single posts
+================================================================================================
+@package        Arlene
+@link           https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 get_header(); ?>
     <section class="single-cover" 
      style="background-image:url(<?php echo esc_url(get_header_image());?>); background-position:center center;">

@@ -1,4 +1,16 @@
 <?php
+/*
+================================================================================================
+Customizer custom control - Color Palette
+It display a 6-color palette in the theme customization panel
+================================================================================================
+@package        Arlene
+@link           https://codex.wordpress.org/Theme_Customization_API
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.co/)
+================================================================================================
+*/
 if ( ! class_exists( 'WP_Customize_Control' ) )
     return NULL;
 

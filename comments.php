@@ -1,14 +1,16 @@
 <?php
-/**
- * The template for displaying comments
- *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Arlene
- */
+/*
+================================================================================================
+The template for displaying comments. This is the template that displays the area 
+of the page that contains both the current comments and the comment form.
+================================================================================================
+@link           @link https://codex.wordpress.org/Template_Hierarchy
+@package        Arlene
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.co/)
+================================================================================================
+*/
 
 /*
  * If the current post is protected by a password and

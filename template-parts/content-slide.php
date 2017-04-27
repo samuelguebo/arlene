@@ -1,12 +1,15 @@
 <?php
-/**
- * Template part for displaying articles in the Slider loop
- *
- * @link https://codex.wordpress.org/The_Loop
- *
- * @package Alliance Lab
- */
-
+/*
+================================================================================================
+Template part for displaying articles in the Slider loop
+================================================================================================
+@package        Arlene
+@link https://codex.wordpress.org/The_Loop
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 ?>
 
 

@@ -1,14 +1,15 @@
 <?php
-/**
- * The template for displaying the menu
- *
- * Contains the menu items
- *
- * @link https://developer.wordpress.org/reference/functions/wp_nav_menu/
- * @link https://codex.wordpress.org/Class_Reference/Walker
- * @package Arlene
- */
-
+/*
+================================================================================================
+The template for displaying the menu. It contains the menu items
+================================================================================================
+@package        Arlene
+@link           https://codex.wordpress.org/The_Loop
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 ?>
     <nav class="top-bar" data-topbar >
         <ul class="title-area">

@@ -1,11 +1,10 @@
 <?php
 /*
 ================================================================================================
-Arlene - content-event.php
-================================================================================================
 Template part for displaying event lists item.
-@link https://codex.wordpress.org/The_Loop
+================================================================================================
 
+@link https://codex.wordpress.org/The_Loop
 @package        Arlene
 @copyright      Copyright (C) 2017. Samuel Guebo
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)

@@ -1,9 +1,15 @@
 <?php
-/**
- * Arlene Theme Customizer
- *
- * @package Arlene
- */
+/*
+================================================================================================
+Arlene Theme Customizer
+================================================================================================
+@package        Arlene
+@link           https://codex.wordpress.org/Theme_Customization_API
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.co/)
+================================================================================================
+*/
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.

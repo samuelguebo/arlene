@@ -1,12 +1,16 @@
 <?php
-/**
- * Custom functions that act independently of the theme templates
- *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package Arlene
- */
-
+/*
+================================================================================================
+Custom functions that act independently of the theme templates. Eventually, 
+some of the functionality here could be replaced by core features.
+================================================================================================
+@package        Arlene
+@link           https://developer.wordpress.org/themes/basics/theme-functions/
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.co/)
+================================================================================================
+*/
 /**
  * Adds custom classes to the array of body classes.
  *

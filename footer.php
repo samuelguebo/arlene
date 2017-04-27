@@ -1,13 +1,16 @@
 <?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the body all content after and containing the bottom widget area
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Arlene
- */
+/*
+================================================================================================
+The template for displaying the footer. It contains the closing of the body all content 
+after and containing the bottom widget area
+================================================================================================
+@package        Arlene
+@link           https://developer.wordpress.org/themes/basics/template-files/#template-partials
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 ?>
     <footer id="footer">
         <div class="row">

@@ -1,18 +1,18 @@
 <?php
-/**
- * Jetpack Compatibility File
- *
- * @link https://jetpack.com/
- *
- * @package Arlene
- */
+/*
+================================================================================================
+Jetpack Compatibility File
+================================================================================================
+@package        Arlene
+@link           https://jetpack.com/
+@link           https://jetpack.com/support/infinite-scroll/
+@link           https://jetpack.com/support/responsive-videos/
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
 
-/**
- * Jetpack setup function.
- *
- * See: https://jetpack.com/support/infinite-scroll/
- * See: https://jetpack.com/support/responsive-videos/
- */
 function arlene_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
