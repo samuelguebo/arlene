@@ -22,13 +22,13 @@ The slider containing the carousel animation
     $sliders = get_posts( $args );
     if($sliders):?>
         <section id="slider" class="row">
-        <ul class="slider-orbit slider-wrapper" data-auto-play="true" data-orbit
+        <ul class="slider-orbit slider-wrapper" data-orbit
             data-options="animation:fade;
             pause_on_hover:false;
             animation_speed:500;
             navigation_arrows:false;
             timer_speed:4000;
-            timer:false;
+            timer:true;
             bullets:true;
             slide_number:false;"
             >
