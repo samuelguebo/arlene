@@ -588,17 +588,3 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
             echo $filename.' is not being used';
         }
     }
-   /* 
-    * Force WordPress to display future posts 
-    *
-    */
-    function arlene_show_future_posts($posts)
-    {
-       global $wp_query, $wpdb;
-       if(is_single() && $wp_query->post_count == 0)
-       {
-          $posts = $wpdb->get_results($wp_query->request);
-       }
-       return $posts;
-    }
-    add_filter('the_posts', 'arlene_show_future_posts');
