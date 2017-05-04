@@ -15,7 +15,8 @@ after and containing the bottom widget area
     <footer id="footer">
         <div class="row">
                 <div class="medium-6 large-6 columns">
-                    <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a></p>
+                    <p class="copyright"><?php _e('Developed by ','arlene')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'arlene' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'arlene' ), 'WordPress' ); ?></a> <?php _e('and available on','arlene')?> <a href="https://github.com/samuelguebo/arlene"><i class="fa fa-github"></i> Github</a>
+                    </p><!-- copyright-->
                 </div>
                 <div class="medium-4 large-4 columns">
                         <?php get_search_form(); ?>
@@ -23,8 +24,10 @@ after and containing the bottom widget area
                 <div class="medium-2 large-2 columns socials right">
                         <?php get_template_part('menu', 'social'); ?>
                 </div>
-        </div><!-- copyright-->
-
+        </div>
+        <div class="row back-to-top-wrapper">
+            <a href="#0" class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a><!-- back to top-->
+        </div>
     </footer>
     <?php wp_footer(); ?>
 </section><!-- .boxed-wrapper-->
