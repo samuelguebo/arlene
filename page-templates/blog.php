@@ -44,8 +44,11 @@ get_header(); ?>
                                 $blog_posts = new WP_Query($args);
                                 while ( $blog_posts->have_posts() ) : $blog_posts->the_post();
 
-                                    //get_template_part( 'template-parts/content', get_post_format() );
+                                                                       if(has_post_thumbnail()){
                                     get_template_part( 'template-parts/content', 'article' );
+                                    }else {
+                                        get_template_part( 'template-parts/content', 'article-without-thumb' );
+                                    }
 
                                 endwhile;
 

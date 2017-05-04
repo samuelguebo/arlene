@@ -24,7 +24,7 @@ Template part for displaying articles in loop
         <?php if(is_single()): global $numpages; ?>
             <div class="panel">
                 <div class="post-content">
-                    <?php if(is_single('post')):?>
+                    <?php if(is_singular('post')):?>
                         <span class="post-item-date"><?php echo get_the_date('d/m/Y')?> / <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></span><br><!--date/-->
                     <?php endif;?>
                     <?php the_content();?> 

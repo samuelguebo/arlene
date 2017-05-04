@@ -286,11 +286,15 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
         //echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
         if ($showCurrent == 1) echo '' . $before . get_the_title() . $after;
       } else {
-        $cat = get_the_category(); $cat = $cat[0];
-        $cats = get_category_parents($cat, TRUE, '');
-        if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
-        echo $cats;
-        if ($showCurrent == 1) echo $before . get_the_title() . $after;
+          $cat = get_the_category(); 
+          if(count($cat)>0){
+                $cat = $cat[0];
+                $cats = get_category_parents($cat, TRUE, '');
+                if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
+                echo $cats;
+           }
+          if ($showCurrent == 1) echo $before . get_the_title() . $after;
+        
       }
  
     } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
@@ -575,16 +579,52 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
     }
 
     add_action( 'init', 'arlene_custom_post_types', 0 );
-
-    /*
-     * Check is a certain template is currently being used 
-     * by a page. If yes, return the url of that page
+/*
+     * Customize the comments with this fallback
+     *
      */
-    function arlene_get_template_url($filename) {
-        if ( is_page_template($filename) ) {
-            echo $filename.' is being used';
-        } else {
-            //return false;// Returns false when 'about.php' is not being used.
-            echo $filename.' is not being used';
-        }
+    function arlene_custom_comments( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+    echo '<div class="comment-list">';
+        switch( $comment->comment_type ) :
+            case 'pingback' :
+            case 'trackback' : ?>
+                <li <?php comment_class(); ?> id="comment<?php comment_ID(); ?>">
+                <div class="back-link"><?php comment_author_link(); ?></div>
+            <?php break;
+            default : ?>
+                <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+                <article <?php comment_class(); ?> class="comment">
+
+                <div class="comment-body">
+                    <div class="author vcard">
+                    <?php echo get_avatar( $comment, 100 ); ?>
+                    <h6 class="author-name">
+                        <a href="<?php comment_author_link(); ?>"><?php comment_author(); ?></a>
+                    </h6>
+                    <?php comment_text(); ?>
+                    <hr/>
+                    <footer class="comment-footer">
+                    <span class="date">
+                    <?php comment_date('d/m/Y'); ?>
+                    </span> - 
+                    <span class="time">
+                    <?php comment_time('H:i'); ?>
+                    </span>
+                    <div class="reply"><?php 
+                    comment_reply_link( array_merge( $args, array( 
+                    'reply_text' => __( 'Reply', 'arlene' ),
+                    'depth' => $depth,
+                    'max_depth' => $args['max_depth'] 
+                    ) ) ); ?>
+                    </div><!-- .reply -->
+                    </footer><!-- .comment-footer -->
+                    </div><!-- .vcard -->
+                </div><!-- comment-body -->
+
+                </article><!-- #comment-<?php comment_ID(); ?> -->
+            <?php // End the default styling of comment
+            break;
+        endswitch;
+    echo '</div>';
     }
