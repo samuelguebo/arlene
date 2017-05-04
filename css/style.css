@@ -419,6 +419,11 @@ header .socials {
 meta.foundation-mq-topbar {
   width: 65em; }
 
+.top-bar .toggle-topbar.menu-icon a span::after {
+  margin-top: 0px;
+  top: 0%;
+  right: 0.9375rem; }
+
 @media only screen and (max-width: 65em) {
   .top-bar-section li:not(.has-form) a:not(.button) {
     font-size: 0.9em; }
@@ -1608,6 +1613,9 @@ footer .breadcrumbs > *::before {
     clear: both;
     */ }
 
+  header div.logo {
+    margin-bottom: -55px !important; }
+
   .top-bar-section ul li:hover:not(.has-form) > a {
     color: #319865; }
 
@@ -1729,6 +1737,9 @@ footer .breadcrumbs > *::before {
 23.0 - Media Queries (Mobile Small 20em (320px))
 ================================================================================================
 */
+@media only screen and (max-width: 20em) {
+  header div.logo {
+    margin-bottom: -35px !important; } }
 /*
 ================================================================================================
 24.0 - Miscelleanous (clearfix, figure, no-padding)
