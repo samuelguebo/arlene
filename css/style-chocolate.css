@@ -142,7 +142,8 @@ header div.logo img {
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  min-height: 120px; }
 
 .single-cover .title.center {
   text-align: center;
@@ -316,9 +317,9 @@ header .socials ul li a {
   display: block; }
 
 header .socials ul li a:hover {
-  color: #e67648;
+  color: #020d16;
   text-align: center;
-  border: solid 1px #e67648; }
+  border: solid 1px #020d16; }
 
 header .nav-wrapper, header .socials {
   /*margin-top:15px;*/ }

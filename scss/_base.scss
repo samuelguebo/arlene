@@ -170,6 +170,7 @@ header div.logo img {
     width: 100%;
     top: 0;
     left: 0;
+    min-height:120px;
 }
 .single-cover .title.center{
         text-align: center;
@@ -372,9 +373,9 @@ header .socials ul li a {
 }
 
 header .socials ul li a:hover {
-    color: $secondary-color;
+    color: $dark-color;
     text-align: center;
-    border: solid 1px $secondary-color;
+    border: solid 1px $dark-color;
 }
 
 header .nav-wrapper, header .socials {
