@@ -66,7 +66,7 @@ In this theme we are using a default [WordPress template hierarchy](http://codex
 ## Live demo and instructions
 To be filled shortly with more details.
 
-## License
+## License and credits
 
 This theme is based on Underscore WordPress theme by Theme Horse.
 
@@ -85,6 +85,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 - [Commons images](https:commons.wikimedia.org), under Creative Commons By SA 4.0 License
 - [ScrollReveal](https://github.com/jlmakes/scrollreveal), under MIT License.
+- CSS Content table and Header commenting style was borrowed from [@benlumia007](https://twitter.com/benlumia007)
 
 
 # Change log

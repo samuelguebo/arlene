@@ -1099,6 +1099,11 @@ article.columns + article.columns:last-child {
 .single-row .category-title, .single-row .category-title-line {
   text-align: left; }
 
+.post-list.not-found ul {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3; }
+
 /*
 ================================================================================================
 13.0 - Content (Events)
