@@ -25,7 +25,7 @@ Template part for displaying 404 error message
             <?php $lostposts = get_posts("numberposts=50&suppress_filters=0");
                 if ( $lostposts ): ?>
                     <?php foreach($lostposts as $lostpost):
-                        echo '<li><a href="'.$lostpost->guid.'">'.$lostpost->post_title.'</a></li>';
+                        echo '<li><a href="'.get_permalink($lostpost->ID).'">'.$lostpost->post_title.'</a></li>';
                     endforeach;
                 endif;
             ?>
