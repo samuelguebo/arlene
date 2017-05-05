@@ -19,6 +19,7 @@ get_header(); ?>
                     <h3 class="center title">
                         <?php the_title();?>
                     </h3>
+                    <section class="clearfix"></section>
                 </div>
             </section>
             <section id="breadcrumbs" >

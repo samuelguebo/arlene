@@ -14,12 +14,13 @@ This is the template that displays all posts. Let's call it the Blog as a conven
 
 
 get_header(); ?>
-    <section class="single-cover" 
+            <section class="single-cover" 
              style="background-image:url(<?php echo esc_url(get_header_image());?>); background-position:center center;">
                 <div class="overlay">
                     <h3 class="center title">
                         <?php the_title();?>
                     </h3>
+                    <section class="clearfix"></section>
                 </div>
             </section>
             <section id="breadcrumbs" >

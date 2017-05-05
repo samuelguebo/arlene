@@ -89,15 +89,6 @@ function arlene_widgets_init() {
 		'before_title'  => '<h5 class="widget-title">',
 		'after_title'   => '</h5>',
 	) );
-    register_sidebar( array(
-		'name'          => esc_html__( 'Footer', 'arlene' ),
-		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', 'arlene' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s large-4 small-up-4 columns widget left">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h5 class="widget-title">',
-		'after_title'   => '</h5>',
-	) );
 }
 add_action( 'widgets_init', 'arlene_widgets_init' );
 

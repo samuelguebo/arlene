@@ -14,9 +14,10 @@ get_header(); ?>
     <section class="single-cover" 
      style="background-image:url(<?php echo esc_url(get_header_image());?>); background-position:center center;">
         <div class="overlay">
-            <h3 class="center title columns large-10 large-centered">
+        <h3 class="center title columns large-10 large-centered">
             <?php the_title();?>
         </h3>
+            <section class="clearfix"></section>
         </div>
         
     

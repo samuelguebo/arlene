@@ -170,7 +170,6 @@ header div.logo img {
     width: 100%;
     top: 0;
     left: 0;
-    min-height:120px;
 }
 .single-cover .title.center{
         text-align: center;
@@ -1382,30 +1381,30 @@ aside .recent-posts-box ul li a {
 ================================================================================================
 */
 
-footer {
+footer#footer {
     background: $primary-color;
 }
 
-footer {
+footer#footer {
     padding: 35px 20px 25px 20px;
     color: #FFF;
 }
 
-footer .copyright {
+footer#footer .copyright {
     font-size: 0.9em;
     margin-bottom: 0px;
 }
 
-footer .copyright a {
+footer#footer .copyright a {
     color: $dark-color;
 }
 
-footer .copyright a:hover {
+footer#footer .copyright a:hover {
     color: #FFF;
 }
 
 
-footer .footer-bar {
+footer#footer .footer-bar {
     margin-bottom: 25px;
     background-image: url("../img/bright-squares.png");
     background-blend-mode:normal;
@@ -1415,19 +1414,19 @@ footer .footer-bar {
     background-attachment: fixed;
 }
 
-footer .footer-bar form{
+footer#footer .footer-bar form{
     max-width: 100%;
     overflow: hidden;
 }
-footer button.search-submit.button.small {
+footer#footer button.search-submit.button.small {
     padding: 0.50rem 1.2rem;
     height: 2.4rem;
     overflow: hidden;
 }
-footer button.search-submit i{
+footer#footer button.search-submit i{
     font-size: 1.4em;
 }
-footer .widget .button.small{
+footer#footer .widget .button.small{
     padding-left:5px;
     padding-right:5px;
     width:100%;
@@ -1435,17 +1434,17 @@ footer .widget .button.small{
     padding:0.55em;
     
 }
-footer .footer-bar .widget-title {
+footer#footer .footer-bar .widget-title {
     color: $light-color;
 }
 
-footer .footer-bar {
+footer#footer .footer-bar {
     margin-top: 20px;
     background-color: $dark-color;
 }
 
 
-footer .footer-bar .widget-title {
+footer#footer .footer-bar .widget-title {
     font-family: $primary-font;
     text-transform: uppercase;
     border-bottom: solid 1px;
@@ -1454,11 +1453,11 @@ footer .footer-bar .widget-title {
     margin-bottom: 15px;
 }
 
-footer .back-to-top-wrapper {
+footer#footer .back-to-top-wrapper {
     position: relative;
 }
 
-footer a.back-to-top {
+footer#footer a.back-to-top {
     width: 60px;
     height: 60px;
     -moz-border-radius: 30px;
@@ -1474,13 +1473,13 @@ footer a.back-to-top {
     font-size: 2em;
 }
 
-footer a.back-to-top:hover {
+footer#footer a.back-to-top:hover {
     color: $link-color;
     background: #fff;
     border: solid 1px $link-color;
 }
 
-footer a#back-to-top {
+footer#footer a#back-to-top {
     opacity: 1;
     z-index: 999;
 }
@@ -1686,6 +1685,7 @@ footer .breadcrumbs > *::before {
 .breadcrumbs > * {
     color: #000;
     font-size: 0.7em;
+    line-height: 1.2rem;
 }
 
 .breadcrumbs  a {

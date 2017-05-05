@@ -74,7 +74,7 @@ Template part for displaying articles in loop
 </article>
 <?php 
     // If comments are open or we have at least one comment, load up the comment template.
-    if ( comments_open() || get_comments_number() ) :?>
+    if ( comments_open() || get_comments_number() && !post_password_required())  :?>
     <article class="post-item comment-wrapper">
         <div class="panel">
             <?php comments_template();?>

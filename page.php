@@ -18,6 +18,7 @@ get_header(); ?>
         <div class="overlay">
             <h3 class="center title columns large-10 large-centered">
             <?php the_title();?>
+            <section class="clearfix"></section>
         </h3>
         </div>
         
