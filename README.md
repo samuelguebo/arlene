@@ -85,7 +85,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 - [Commons images](https:commons.wikimedia.org), under Creative Commons By SA 4.0 License
 - [ScrollReveal](https://github.com/jlmakes/scrollreveal), under MIT License.
-- CSS Content table and Header commenting style was borrowed from [@benlumia007](https://twitter.com/benlumia007)
+- CSS Content table and Header commenting style was borrowed from [@benlumia007](https://github.com/benlumia007)
 
 
 # Change log
