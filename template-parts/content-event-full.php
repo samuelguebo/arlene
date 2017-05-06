@@ -18,16 +18,16 @@ on the Calendar page.
 ?>
 
 <div class="event-item clearfix">
-    <div class="columns large-1 small-1 no-padding-left">
+    <div class="columns small-2 large-1 small-1 no-padding-left">
         <h1 class="day"><?php echo get_the_date('d')?></h1>
     </div>
         
-    <div class="columns large-2 small-2">
+    <div class="columns large-2 small-4">
         <h3 class="month"><?php echo get_the_date('F')?></h3>
         <h6 class="full-day"><?php echo get_the_date('l')?></h6>
     </div>
         
-    <div class="columns large-9 small-9 no-padding-right">
+    <div class="columns large-9 small-6 no-padding-right">
         <h3 class="description"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3> 
     </div>
 </div><!--event/-->

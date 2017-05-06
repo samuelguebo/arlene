@@ -37,7 +37,7 @@ get_header(); ?>
                                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // for pagination purpose
                                 $args = array(
                                         'post_type' => array('event'),
-                                        'posts_per_page' =>4,
+                                        'posts_per_page' =>6,
                                         //'order'=>'ASC',
                                         'post_status' => array('publish','future'),
                                         'paged'=>$paged
