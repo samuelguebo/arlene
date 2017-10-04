@@ -1,5 +1,5 @@
 # Arlene
-A WordPress theme for NGOs.
+A WordPress theme for NGOs. This branch, named **Standalone**, works independently of the Kirki framework and handles custom post types. Therefore it is not suitable for WordPress official repository.
 
 [![arlene_screenshot.png](https://s6.postimg.org/fcjb55bvl/arlene_screenshot.png)](https://postimg.org/image/pzd4akk0t/)
 ## Description
