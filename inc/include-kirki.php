@@ -64,11 +64,11 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Kirki_Installer_
 			?>
 			<div style="padding:10px 14px;">
 				<?php if ( ! $installed ) : ?>
-					<?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'bastille' ); ?>
-					<a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_install_url ); ?>" aria-label="Install Kirki Toolkit now" data-name="Kirki Toolkit"><?php esc_html_e( 'Install Now', 'bastille' ); ?></a>
+					<?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'arlene' ); ?>
+					<a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_install_url ); ?>" aria-label="Install Kirki Toolkit now" data-name="Kirki Toolkit"><?php esc_html_e( 'Install Now', 'arlene' ); ?></a>
 				<?php else : ?>
-					<?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'bastille' ); ?>
-					<a class="install-now button-secondary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_activate_url ); ?>" aria-label="Activate Kirki Toolkit now" data-name="Kirki Toolkit"><?php esc_html_e( 'Activate Now', 'bastille' ); ?></a>
+					<?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'arlene' ); ?>
+					<a class="install-now button-secondary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_activate_url ); ?>" aria-label="Activate Kirki Toolkit now" data-name="Kirki Toolkit"><?php esc_html_e( 'Activate Now', 'arlene' ); ?></a>
 				<?php endif; ?>
 			</div>
 			<?php
