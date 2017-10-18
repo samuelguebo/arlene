@@ -145,7 +145,7 @@ function arlene_customize_register( $wp_customize ) {
 		'sanitize_callback'	=> 'absint'
 
 	));
-
+	
 	Arlene_Kirki::add_field( 'programmes_selection', array(
 		'type'        => 'repeater',
 		'settings'    => 'programmes_selection_repeater',
@@ -162,11 +162,12 @@ function arlene_customize_register( $wp_customize ) {
 					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
 					'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
 					'default'     => 0,
-					'choices'     => Kirki_Helper::get_terms( array('post_type' => 'page')) 
+					'choices'     => Kirki_Helper::get_terms( array('post_type' => 'page')), 
 					'sanitize_callback'	=> 'absint'
 				)
 		)
 	));	
+
 
 	
 	 

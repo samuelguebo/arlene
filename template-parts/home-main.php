@@ -3,7 +3,7 @@
 		<div class="columns large-12 category-header no-padding-left">
 			<div class="small-8 medium-6 large-6 columns left">
 				<h3 class="category-title">
-				<?php echo arlene_get_posts_label();?>
+				<?php //echo arlene_get_posts_label();?>
 				</h3>
 			</div>
 			<div class="small-4 medium-6 large-6 columns category-title-line right"></div>
@@ -22,7 +22,7 @@
 				endif; wp_reset_query();?>
 			</div>
 			<p class="call-to-action clearfix">
-				<a href="<?php the_permalink(arlene_get_posts_page());?>" class="small button post-item-buttom radius"><?php _e('All posts','arlene')?></a>
+				<a href="<?php //the_permalink(arlene_get_posts_page());?>" class="small button post-item-buttom radius"><?php _e('All posts','arlene')?></a>
 			</p>
 			
 		</div>
@@ -30,7 +30,7 @@
 	<aside id="sidebar" class="large-4 columns">
 		<div class="columns large-12 category-header no-padding-left no-padding-right">
 			<div class="small-5 large-5 columns no-padding-left">
-				<h3 class="category-title"><?php echo arlene_get_events_label();?></h3>
+				<h3 class="category-title"><?php echo //arlene_get_events_label();?></h3>
 			</div>
 			<div class="small-7 large-7 columns category-title-line right no-padding-right"></div>
 		</div><!--header/-->
@@ -46,7 +46,7 @@
 			endif; wp_reset_query();?>
 			<p class="call-to-action">
 				
-				<a href="<?php the_permalink(arlene_get_events_page());?>" class="small button radius"><?php _e('All events','arlene')?></a>
+				<a href="<?php the_permalink(//arlene_get_events_page());?>" class="small button radius"><?php _e('All events','arlene')?></a>
 			</p>
 		</div>
 	</aside>
