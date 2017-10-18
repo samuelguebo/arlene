@@ -12,12 +12,13 @@ home-main.php, is displayed as a fallback.
 ================================================================================================
 */
 ?>
+
 <section class="row main-row">
 	<section class="large-8 columns main-column">
 		<div class="columns large-12 category-header no-padding-left">
 			<div class="small-8 medium-6 large-6 columns left">
 				<h3 class="category-title">
-				<?php echo arlene_get_programmes_label();?>
+					<?php //Bastille_Kirki::get_option('programmes_label');?>
 				</h3>
 			</div>
 			<div class="small-4 medium-6 large-6 columns category-title-line right"></div>

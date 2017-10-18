@@ -18,52 +18,51 @@ Arlene Theme Customizer
  */
 function arlene_customize_register( $wp_customize ) {
 	
-    
-    /*
-     * Theme colors using Customizer Custom Controls, 
-     * @link https://github.com/bueltge/Wordpress-Theme-Customizer-Custom-Controls
-     *
-     */
-    require_once dirname(__FILE__) . '/class-palette_custom_control.php';
-    
-    $wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
-    $wp_customize->add_setting(
+	/*
+	 * Theme colors using Customizer Custom Controls, 
+	 * @link https://github.com/bueltge/Wordpress-Theme-Customizer-Custom-Controls
+	 *
+	 */
+	require_once dirname(__FILE__) . '/class-palette_custom_control.php';
+	
+	$wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
+	$wp_customize->add_setting(
 		'arlene_theme_color', array(
 			'default' => '',
-            'sanitize_callback'	=> 'arlene_sanitize_colors'
+			'sanitize_callback'	=> 'arlene_sanitize_colors'
 
 		)
 	);
-    
-    $wp_customize->add_control(
-            new Palette_Custom_Control(
-                $wp_customize, 'arlene_theme_color', array(
-                    'label' => __( 'Theme color', 'arlene' ),
-                    'section' => 'colors',
-                    'settings' => 'arlene_theme_color',
-                )
-            )
-        );    
-    
-     /*
-      * Events
-      *
-      */
-    
-    // Create sections for Events settings
-    $wp_customize->add_section('arlene_events_section', array(
+	
+	$wp_customize->add_control(
+			new Palette_Custom_Control(
+				$wp_customize, 'arlene_theme_color', array(
+					'label' => __( 'Theme color', 'arlene' ),
+					'section' => 'colors',
+					'settings' => 'arlene_theme_color',
+				)
+			)
+		);    
+	
+	 /*
+	  * Events
+	  *
+	  */
+	
+	// Create sections for Events settings
+	$wp_customize->add_section('arlene_events_section', array(
 		'title' => __('Events', 'arlene'),
 		'priority' => 30,
 	));
-    
-    // Events page selector
-    $wp_customize->add_setting('events_page', array(
+	
+	// Events page selector
+	$wp_customize->add_setting('events_page', array(
 		'default' => '#',
 		'transport' => 'refresh',
-        'sanitize_callback'	=> 'absint'
+		'sanitize_callback'	=> 'absint'
 
 	));
-    $wp_customize->add_control(new WP_Customize_Control(
+	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
 		'events_page',
 		array(
@@ -73,15 +72,15 @@ function arlene_customize_register( $wp_customize ) {
 			'type' => 'dropdown-pages',
 		)
 	));
-    
-     // Events label
-    $wp_customize->add_setting('events_label', array(
+	
+	 // Events label
+	$wp_customize->add_setting('events_label', array(
 		'default' => __('Events', 'arlene'),
 		'transport' => 'refresh',
-        'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'sanitize_text_field'
 
 	));
-    $wp_customize->add_control(new WP_Customize_Control(
+	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
 		'events_label',
 		array(
@@ -91,26 +90,26 @@ function arlene_customize_register( $wp_customize ) {
 			'type' => 'text',
 		)
 	));
-    
-    /*
-     * Programmes
-     *
-     */
-    
-    // Create sections for Programmes settings
-    $wp_customize->add_section('arlene_programmes_section', array(
+	
+	/*
+	 * Programmes
+	 *
+	 */
+	
+	// Create sections for Programmes settings
+	$wp_customize->add_section('arlene_programmes_section', array(
 		'title' => __('Programmes', 'arlene'),
 		'priority' => 30,
 	));
-    
-    // Programmes page selector
-    $wp_customize->add_setting('programmes_page', array(
+	
+	// Programmes page selector
+	$wp_customize->add_setting('programmes_page', array(
 		'default' => '#',
 		'transport' => 'refresh',
-        'sanitize_callback'	=> 'absint'
+		'sanitize_callback'	=> 'absint'
 
 	));
-    $wp_customize->add_control(new WP_Customize_Control(
+	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
 		'programmes_page',
 		array(
@@ -120,15 +119,15 @@ function arlene_customize_register( $wp_customize ) {
 			'type' => 'dropdown-pages',
 		)
 	));
-    
-     // Programmes label
-    $wp_customize->add_setting('programmes_label', array(
+	
+	 // Programmes label
+	$wp_customize->add_setting('programmes_label', array(
 		'default' => __('Programmes', 'arlene'),
 		'transport' => 'refresh',
-        'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'sanitize_text_field'
 
 	));
-    $wp_customize->add_control(new WP_Customize_Control(
+	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
 		'programmes_label',
 		array(
@@ -138,15 +137,48 @@ function arlene_customize_register( $wp_customize ) {
 			'type' => 'text',
 		)
 	));
+
+	// Programmes repeater feature
+	Arlene_Kirki::add_field( 'arlene', array(
+		'type'        => 'repeater',
+		'settings'    => 'bloc_repeater',
+		'label'       => __( 'Create a new bloc', 'bastille' ),
+		'description' => __( 'Set up the bloc, define category, number of posts, etc', 'bastille' ),
+		'section'     => 'home_section',
+		'default'     => array(),
+		'priority'    => 10,
+		'row_label' => array(
+			'type' => 'text',
+			'value' => esc_attr__('Bloc', 'bastille' ),
+		),
+		'fields' => array(
+			'bloc_category' => array(
+					'type'        => 'select',
+					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
+					'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
+					'default'     => 0,
+					//'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
+					'choices'     => bastille_categories_array(),
+					'sanitize_callback'	=> 'absint'
+				),
+			'bloc_number' => array(
+					'type'        => 'number',
+					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
+					'description' => esc_attr__( 'Number of posts to display', 'bastille' ),
+					'default'     => 1,
+					'choices'     => array(
+							'min'  => 1,
+							'max'  => 10,
+							'step' => 1,
+						),
+					'sanitize_callback'	=> 'absint'
+				)
+		)
+	)
+);
+	 
 }
 add_action( 'customize_register', 'arlene_customize_register' );
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function arlene_customize_preview_js() {
-	wp_enqueue_script( 'arlene_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170425', true );
-}
 
 /* Validate user input */
 get_template_part('inc/customizer-sanitize'); 
