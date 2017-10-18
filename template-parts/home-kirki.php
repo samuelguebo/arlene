@@ -1,3 +1,17 @@
+<?php
+/*
+================================================================================================
+Template part for displaying the homepage. The Kirki plugin is required, otherwise
+home-main.php, is displayed as a fallback.
+================================================================================================
+@package        Arlene
+@link           https://codex.wordpress.org/The_Loop
+@copyright      Copyright (C) 2017. Samuel Guebo
+@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (http://samuelguebo.co/)
+================================================================================================
+*/
+?>
 <section class="row main-row">
 	<section class="large-8 columns main-column">
 		<div class="columns large-12 category-header no-padding-left">
