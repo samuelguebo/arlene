@@ -346,7 +346,6 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
 				}
 		}
 }
-		
 		/*
 		 * Getters for customizer options
 		 *
@@ -461,7 +460,7 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
 				register_nav_menu( 'social', __( 'Social', 'arlene' ) );
 		}
 
-	 /* 
+	 	/* 
 		* Force WordPress to display future posts 
 		*
 		*/
