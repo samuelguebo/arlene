@@ -415,7 +415,7 @@ if(!function_exists('arlene_custom_breadcrumbs')) {
      * Check if thumbnail or firstImage exist
      *
      */
-    function has_post_thumbnail_or_image(){
+    function arlene_has_post_thumbnail_or_image(){
         global $post;
         $first_img = arlene_get_first_image($post->ID);
         if(!has_post_thumbnail())

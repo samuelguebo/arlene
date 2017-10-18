@@ -17,7 +17,7 @@ Template part for displaying content in loop
     <div class="post-item-caption">
         <div class="post-item-image"> 
             <?php
-                if ( has_post_thumbnail_or_image ()) { 
+                if ( arlene_has_post_thumbnail_or_image ()) { 
                     the_post_thumbnail( 'post-thumb' ); 
                 }
             ?>
