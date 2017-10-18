@@ -146,19 +146,7 @@ function arlene_customize_register( $wp_customize ) {
 
 	));
 
-	Kirki::add_field( 'programmes_selection', array(
-		'type'        => 'dropdown-pages',
-		'settings'    => 'programmes_selection',
-		'label' => __('Pick the pages to display as programmes', 'arlene'),
-		'section'     => 'arlene_programmes_section',
-		'default'     => '',
-		'priority'    => 10,
-		'multiple'    => 1,
-		'choices'     => arlene_get_pages()
-		) 
-	);
-
-	Arlene_Kirki::add_field( 'bastille', array(
+	Arlene_Kirki::add_field( 'programmes_selection', array(
 		'type'        => 'repeater',
 		'settings'    => 'programmes_selection_repeater',
 		'label' => __('Pick the pages to display as programmes', 'arlene'),
@@ -174,8 +162,7 @@ function arlene_customize_register( $wp_customize ) {
 					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
 					'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
 					'default'     => 0,
-					//'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
-					'choices'     => bastille_categories_array(),
+					'choices'     => Kirki_Helper::get_terms( array('post_type' => 'page')) 
 					'sanitize_callback'	=> 'absint'
 				)
 		)
