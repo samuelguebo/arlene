@@ -397,4 +397,4 @@ class Arlene_Kirki {
 		}
 	}
 }
-new Bastille_Kirki();
+new Arlene_Kirki();

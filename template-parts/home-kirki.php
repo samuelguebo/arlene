@@ -18,7 +18,7 @@ home-main.php, is displayed as a fallback.
 		<div class="columns large-12 category-header no-padding-left">
 			<div class="small-8 medium-6 large-6 columns left">
 				<h3 class="category-title">
-					<?php //Bastille_Kirki::get_option('programmes_label');?>
+					<?php //Arlene_Kirki::get_option('programmes_label');?>
 				</h3>
 			</div>
 			<div class="small-4 medium-6 large-6 columns category-title-line right"></div>

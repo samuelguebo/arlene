@@ -159,10 +159,10 @@ function arlene_customize_register( $wp_customize ) {
 		'fields' => array(
 			'bloc_category' => array(
 					'type'        => 'select',
-					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
-					'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
+					//'label'       => esc_attr__( 'Display text for section', 'arlene' ),
+					'description' => esc_attr__( 'Category of the bloc', 'arlene' ),
 					'default'     => 0,
-					'choices'     => Kirki_Helper::get_terms( array('post_type' => 'page')), 
+					'choices'     => get_terms( array('post_type' => 'page')), 
 					'sanitize_callback'	=> 'absint'
 				)
 		)
