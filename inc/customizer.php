@@ -146,6 +146,18 @@ function arlene_customize_register( $wp_customize ) {
 
 	));
 
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'programmes_selection',
+		array(
+			'label' => __('Pick the pages to display as programmes', 'arlene'),
+			'section' => 'arlene_programmes_section',
+			'settings' => 'programmes_selection',
+			'type' => 'select',
+			'choices' => array('helo', 'hello'),
+		)
+	));
+
 	
 	 
 }
