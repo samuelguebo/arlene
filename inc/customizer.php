@@ -120,7 +120,7 @@ function arlene_customize_register( $wp_customize ) {
 		)
 	));
 	
-	 // Programmes label
+	// Programmes label
 	$wp_customize->add_setting('programmes_label', array(
 		'default' => __('Programmes', 'arlene'),
 		'transport' => 'refresh',
@@ -138,44 +138,15 @@ function arlene_customize_register( $wp_customize ) {
 		)
 	));
 
-	// Programmes repeater feature
-	Arlene_Kirki::add_field( 'arlene', array(
-		'type'        => 'repeater',
-		'settings'    => 'bloc_repeater',
-		'label'       => __( 'Create a new bloc', 'bastille' ),
-		'description' => __( 'Set up the bloc, define category, number of posts, etc', 'bastille' ),
-		'section'     => 'home_section',
-		'default'     => array(),
-		'priority'    => 10,
-		'row_label' => array(
-			'type' => 'text',
-			'value' => esc_attr__('Bloc', 'bastille' ),
-		),
-		'fields' => array(
-			'bloc_category' => array(
-					'type'        => 'select',
-					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
-					'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
-					'default'     => 0,
-					//'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
-					'choices'     => bastille_categories_array(),
-					'sanitize_callback'	=> 'absint'
-				),
-			'bloc_number' => array(
-					'type'        => 'number',
-					//'label'       => esc_attr__( 'Display text for section', 'bastille' ),
-					'description' => esc_attr__( 'Number of posts to display', 'bastille' ),
-					'default'     => 1,
-					'choices'     => array(
-							'min'  => 1,
-							'max'  => 10,
-							'step' => 1,
-						),
-					'sanitize_callback'	=> 'absint'
-				)
-		)
-	)
-);
+	// Programmes selection
+	$wp_customize->add_setting('programmes_selection', array(
+		'default' => array(),
+		'transport' => 'refresh',
+		'sanitize_callback'	=> 'absint'
+
+	));
+
+	
 	 
 }
 add_action( 'customize_register', 'arlene_customize_register' );
