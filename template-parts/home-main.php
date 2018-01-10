@@ -37,7 +37,7 @@
 		
 		<div class="event-widget">
 			<?php //starting events loop;
-			$args = array ('post_type'=>'event','showposts'=>5,'order'=>'ASC','post_status' => 
+			$args = array ('post_type'=>'event','showposts'=>5,'order'=>'DESC','post_status' => 
 				//array('future')
 		); 
 			$events = new WP_Query($args);                    
