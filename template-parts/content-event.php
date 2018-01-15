@@ -21,7 +21,7 @@ Template part for displaying event lists item.
     </div>
         
     <div class="columns large-4 small-4 no-padding-right">
-        <h3 class="month"><?php echo get_the_date('F')?></h3>
+        <h3 class="month"><?php echo get_the_date('M')?></h3>
         <h6 class="full-day"><?php echo get_the_date('l')?></h6>
     </div>
         

@@ -23,7 +23,7 @@ on the Calendar page.
     </div>
         
     <div class="columns large-2 small-4">
-        <h3 class="month"><?php echo get_the_date('F')?></h3>
+        <h3 class="month"><?php echo get_the_date('M')?>.</h3>
         <h6 class="full-day"><?php echo get_the_date('l')?></h6>
     </div>
         
