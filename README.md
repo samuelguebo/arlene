@@ -27,7 +27,9 @@ It adjusts automatically to any screen size including tablets and smartphones as
 6. Click on **Install Now**
 
 ## Sample Data
-For speeding up the installation process, you can import sample data form an existing website ([wikimedia.ci](http://wikimedia.ci)). You will need the `SAMPLE-DATA.xml` file
+
+For speeding up the installation process, you can import sample data form an existing website ([wikimedia.ci](http://wikimedia.ci)). All sample data is contained in the `SAMPLE-DATA.xml` which is within the template. You can the the file through the Dashbord. See **Tools -> Import -> WordPress**. See full explanation in the [official WordPress documentation](https://codex.wordpress.org/Importing_Content#WordPress).
+
 ## Adapting existing content
 If you already have menus and widgets on the website, you need to do this after finishing the theme activation process:
 
