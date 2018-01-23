@@ -26,7 +26,8 @@ It adjusts automatically to any screen size including tablets and smartphones as
 5. Choose the **arlene.zip** file
 6. Click on **Install Now**
 
-
+## Sample Data
+For speeding up the installation process, you can import sample data form an existing website ([wikimedia.ci](http://wikimedia.ci)). You will need the `SAMPLE-DATA.xml` file
 ## Adapting existing content
 If you already have menus and widgets on the website, you need to do this after finishing the theme activation process:
 
