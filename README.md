@@ -1,7 +1,7 @@
 # Arlene
 A WordPress theme for NGOs. This branch, named **Standalone**, works independently of the Kirki framework and handles custom post types. Therefore it is not suitable for WordPress official repository.
 
-[![arlene_screenshot.png](https://s6.postimg.org/fcjb55bvl/arlene_screenshot.png)](https://postimg.org/image/pzd4akk0t/)
+[![arlene_screenshot.png](http://samuelguebo.co/medias/uploads/2017/04/arlene_green.png)](http://samuelguebo.co/arlene-a-wordpress-theme-for-ngos)
 ## Description
 
 Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath. 
@@ -48,7 +48,7 @@ Set the link for Facebook, Twitter, youtube and other social networks via the Me
 
 #### Colors
  Arlene comes with six flavors: blue, green, red, orange, yellow, and chocolate. You might switch between these colors using the Customizer.
-[![showcase_arlene_theme_wordpress.png](https://s6.postimg.org/9045vb8td/showcase_arlene_theme_wordpress.png)](https://postimg.org/image/y65425a3h/)
+[![showcase_arlene_theme_wordpress.png](http://samuelguebo.co/medias/uploads/2017/04/samuelguebo_arlene_theme_responsive_2.png)](http://samuelguebo.co/arlene-a-wordpress-theme-for-ngos)
 
 
 ## File structure
