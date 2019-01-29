@@ -1,10 +1,10 @@
 # Arlene
-A WordPress theme for NGOs. This branch, named **Standalone**, works independently of the Kirki framework and handles custom post types. Therefore it is not suitable for WordPress official repository.
+A WordPress theme for NGOs. This branch, named **Standalone**, works independently of the Kirki framework and handles custom post types.
 
 [![arlene_screenshot.png](http://samuelguebo.co/medias/uploads/2017/04/arlene_green.png)](http://samuelguebo.co/arlene-a-wordpress-theme-for-ngos)
 ## Description
 
-Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath. 
+Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath.
 
 It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using [Zurb Foundation](https://github.com/zurb/foundation-sites), a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Arlene is available in English, French, and Spanish for now.
 
@@ -16,7 +16,7 @@ It adjusts automatically to any screen size including tablets and smartphones as
 2. Upload the **arlene** folder to the **/wp-content/themes/** directory
 3. Activate the Theme through the Apperance - Themes menu in WordPress
 4. See **Appearance -> Customize**  to change theme specific options.
- 
+
 #### WordPress Admin Panel
 
 1. Download theme by using "Download zip" button on the right side
