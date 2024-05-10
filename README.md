@@ -1,7 +1,7 @@
 # Arlene
 A WordPress theme for NGOs.
 
-[![arlene_screenshot.png](https://s6.postimg.org/fcjb55bvl/arlene_screenshot.png)](https://postimg.org/image/pzd4akk0t/)
+[![arlene_screenshot.png](https://raw.githubusercontent.com/samuelguebo/arlene/master/screenshot.jpg)
 ## Description
 
 Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath. 
